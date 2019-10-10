@@ -15,12 +15,12 @@ deploy:
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 	# @$(ln -sfnv $(DOTPATH)/settings.json ~/Library/Application\ Support/Code/User/settings.json)
 
-# clean:
-# 	@echo 'Start to clean'
-# 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
-# 	-rm -rf $(DOTPATH)
+clean:
+	@echo 'Start to clean'
+	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
+	-rm -rf $(DOTPATH)
 
-# update:
-# 	@echo 'Start to update'
-# 	@git pull origin master
-# 	@make deploy
+update:
+	@echo 'Start to update'
+	@git pull origin master
+	@make deploy
