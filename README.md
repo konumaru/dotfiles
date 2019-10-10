@@ -2,6 +2,17 @@
 
 ## Commands
 
+- install
 ```
-brew bundle dump --file=.brewfile.darwin
+$ make init && make deploy
+```
+
+- update
+```
+$ make update
+```
+
+- brew にインストールされているモジュールをdump
+```
+$ brew bundle dump --file=.brewfile.darwin
 ```
