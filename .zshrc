@@ -25,8 +25,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # costom
 alias cdd='cd /Users/rui/Documents'
-alias cdr='cd /Users/rui/repro'
-alias python="python3"
+alias cdr='cd /Users/rui/Repro'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
