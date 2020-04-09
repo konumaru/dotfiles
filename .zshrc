@@ -23,13 +23,22 @@ export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43
 # 補完候補もLS_COLORSに合わせて色が付くようにする
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-
 # costom
 alias cdd='cd /Users/rui/Documents'
 alias cdr='cd /Users/rui/repro'
 alias python="python3"
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH=/Library/TeX/texbin:$PATH
+
+# rbenv
+export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
+eval "$(rbenv init -)"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # dinghy
 DOCKER_HOST=tcp://192.168.99.100:2376
@@ -63,6 +72,5 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
 # For kggleAPI
 export KAGGLE_USERNAME=konumaru
 export KAGGLE_KEY=99b59b479278d613f6c501861acb2222
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
