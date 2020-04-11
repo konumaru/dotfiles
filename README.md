@@ -14,5 +14,5 @@ $ make update
 
 - brew にインストールされているモジュールをdump
 ```
-$ brew bundle dump --file=.brewfile.darwin
+$ brew bundle dump --file=.brewfile.darwin　--force
 ```
