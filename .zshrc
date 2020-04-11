@@ -1,16 +1,13 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# zshの補完を有効化
+autoload -U compinit
+compinit
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# zsh completion
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    autoload -Uz compinit
+    compinit
 fi
-
-# Customize to your needs...
 
 autoload -Uz promptinit
 promptinit
@@ -39,12 +36,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# dinghy
-DOCKER_HOST=tcp://192.168.99.100:2376
-DOCKER_CERT_PATH=/Users/rui/.docker/machine/machines/dinghy
-DOCKER_TLS_VERIFY=1
-DOCKER_MACHINE_NAME=dinghy
-
 # zsh History
 export HISTSIZE=1000
 export SAVEHIST=100000
@@ -56,6 +47,21 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 ## historyコマンドは履歴に登録しない
 setopt hist_no_store
+# 同時に起動しているzshの間でhistoryを共有する
+setopt share_history
+# コマンドのスペルミスを指摘
+setopt correct
+
+# zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_STYLES
+# エイリアスコマンドのハイライト
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+# 存在するパスのハイライト
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+# グロブ
+ZSH_HIGHLIGHT_STYLES[globbing]='none'
 
 ## direnv
 eval "$(direnv hook zsh)"
@@ -72,4 +78,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
 export KAGGLE_USERNAME=konumaru
 export KAGGLE_KEY=99b59b479278d613f6c501861acb2222
 
+# zsh syntax highlight
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
