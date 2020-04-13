@@ -1,7 +1,3 @@
-# zshの補完を有効化
-autoload -U compinit
-compinit
-
 # zsh completion
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -9,18 +5,26 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+# 色を使用できるようにする
+autoload -Uz colors
+colors
+
+# zsh syntax highlight
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# 補完候補もLS_COLORSに合わせて色が付くようにする
+zstyle ':completion:*' list-colors "${LS_COLORS}"
+## タブ補完時に大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# ls補完時、backgroudでhightlight
+zstyle ':completion:*' menu select
+
+# Themaをpureに設定
 autoload -Uz promptinit
 promptinit
 prompt pure
 
-# ls
-export LSCOLORS=gxfxcxdxbxegedabagacag
-export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;46'
-
-# 補完候補もLS_COLORSに合わせて色が付くようにする
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-# costom
+# alias
 alias cdd='cd /Users/rui/Documents'
 alias cdr='cd /Users/rui/Repro'
 
@@ -32,7 +36,7 @@ export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="/usr/local/var/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
@@ -51,6 +55,16 @@ setopt hist_no_store
 setopt share_history
 # コマンドのスペルミスを指摘
 setopt correct
+# ビープ音を鳴らさない
+setopt no_beep
+ # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
+setopt auto_param_slash
+# 語の途中でもカーソル位置で補完
+setopt complete_in_word
+#入力途中の履歴補完を有効化する
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
 
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
@@ -77,9 +91,3 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
 # For kggleAPI
 export KAGGLE_USERNAME=konumaru
 export KAGGLE_KEY=99b59b479278d613f6c501861acb2222
-
-# zsh syntax highlight
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
