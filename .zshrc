@@ -11,6 +11,8 @@ colors
 
 # zsh syntax highlight
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh autosuggestion from history.
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # 補完候補もLS_COLORSに合わせて色が付くようにする
 zstyle ':completion:*' list-colors "${LS_COLORS}"
