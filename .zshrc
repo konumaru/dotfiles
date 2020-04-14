@@ -1,10 +1,3 @@
-# zsh completion
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-    autoload -Uz compinit
-    compinit
-fi
-
 # 色を使用できるようにする
 autoload -Uz colors
 colors
@@ -93,3 +86,13 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
 # For kggleAPI
 export KAGGLE_USERNAME=konumaru
 export KAGGLE_KEY=99b59b479278d613f6c501861acb2222
+
+
+fpath+=~/.zfunc
+
+# zsh completion
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    autoload -Uz compinit
+    compinit
+fi
