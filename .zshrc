@@ -35,6 +35,9 @@ export PYENV_ROOT="/usr/local/var/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # zsh History
 export HISTSIZE=1000
 export SAVEHIST=100000
