@@ -86,6 +86,17 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
 
+function gconf() {
+  projData=$(gcloud config configurations list | peco)
+  if echo "${projData}" | grep -E "^[a-zA-Z].*" > /dev/null ; then
+    config=$(echo ${projData} | awk '{print $1}')
+    gcloud config configurations activate ${config}
+
+    echo "=== The current account is as follows ==="
+    gcloud config configurations list | grep "${config}"
+  fi
+}
+
 # For kggleAPI
 export KAGGLE_USERNAME=konumaru
 export KAGGLE_KEY=99b59b479278d613f6c501861acb2222

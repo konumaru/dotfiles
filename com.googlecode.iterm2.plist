@@ -12,6 +12,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>Control</key>
+	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>233CA941-2D3D-4E59-92D8-AC0E46E4E211</string>
 	<key>DisableFullscreenTransparency</key>
@@ -56,8 +58,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 351.000000, NO, NO</string>
-		<string>0.000000, 352.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 315.000000, NO, NO</string>
+		<string>0.000000, 316.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -94,7 +96,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>576 457 799 448 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>32 0 1648 499 0 0 1680 1027 </string>
+	<string>0 0 1920 499 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_233CA941-2D3D-4E59-92D8-AC0E46E4E211</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_233CA941-2D3D-4E59-92D8-AC0E46E4E211_selection</key>
@@ -1160,14 +1162,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
 		<string>{426, 1019}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>300C3233-2B0F-4CA9-84E4-F1E69ABA4FDC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>5</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1928,7 +1930,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-09T11:47:38Z</date>
+	<date>2020-04-17T11:49:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
