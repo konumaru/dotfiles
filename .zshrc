@@ -30,6 +30,9 @@ export PATH=/Library/TeX/texbin:$PATH
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -37,6 +40,9 @@ eval "$(pyenv init -)"
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # zsh History
 export HISTSIZE=1000
@@ -58,6 +64,11 @@ setopt no_beep
  # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt auto_param_slash
 # 語の途中でもカーソル位置で補完
+setopt complete_in_word
+# 部分補完をしてくれるやつ
+setopt list_types
+setopt auto_list
+setopt auto_menu
 setopt complete_in_word
 #入力途中の履歴補完を有効化する
 autoload history-search-end

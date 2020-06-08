@@ -45,9 +45,13 @@
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/repositories/dotfiles</string>
+	<string>~</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -94,9 +98,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1235 110 445 205 0 0 1680 1027 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>576 457 799 448 0 0 1920 1057 </string>
+	<string>1519 1264 347 181 0 0 3360 1867 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 499 0 0 1920 1057 </string>
+	<string>25 0 3335 499 0 0 3360 1867 </string>
 	<key>NeverWarnAboutShortLivedSessions_233CA941-2D3D-4E59-92D8-AC0E46E4E211</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_233CA941-2D3D-4E59-92D8-AC0E46E4E211_selection</key>
@@ -1162,21 +1166,25 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1080}}</string>
+		<string>{{0, 0}, {3360, 1890}}</string>
 		<key>topLeft</key>
 		<string>{426, 1019}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>300C3233-2B0F-4CA9-84E4-F1E69ABA4FDC</string>
+	<key>NoSyncLastTipTime</key>
+	<real>608839147.27521801</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>5</integer>
+	<integer>8</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>608297511.06998599</real>
+	<real>608925541.52813196</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
+	<true/>
+	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
@@ -1886,6 +1894,12 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>608124711.06975496</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+	</array>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1930,7 +1944,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-17T11:49:00Z</date>
+	<date>2020-06-07T18:16:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
