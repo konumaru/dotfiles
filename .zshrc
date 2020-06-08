@@ -41,8 +41,9 @@ eval "$(pyenv init -)"
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 # zsh History
 export HISTSIZE=1000
