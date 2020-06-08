@@ -16,3 +16,10 @@ $ make update
 ```
 $ brew bundle dump --force --file=.brewfile.darwin
 ```
+
+
+- pure のインストール
+  - https://github.com/sindresorhus/pure
+```
+$ npm install --global pure-prompt
+```
