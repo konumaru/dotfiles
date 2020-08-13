@@ -111,7 +111,7 @@ function gconf() {
 
 # For kggleAPI
 export KAGGLE_USERNAME=konumaru
-export KAGGLE_KEY=99b59b479278d613f6c501861acb2222
+export KAGGLE_KEY=2e87eee8d6b38b901e6c90b8f9ed0e0c
 
 
 fpath+=~/.zfunc
