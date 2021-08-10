@@ -25,7 +25,7 @@ brew bundle --file=Brewfile
 
 
 # Creat symbolic links
-dotfiles=(.zshrc .zprofile .tmux.conf)
+dotfiles=(.zshrc .zprofile .zshenv .tmux.conf)
 for f in ${dotfiles[@]}
 do
   ln -sfnv $DOTPATH/${f} $HOME/${f}
