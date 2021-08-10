@@ -20,6 +20,6 @@ sh $DOTPATH/bin/install.sh
 dotfiles=(.zshrc)
 for f in $dotfiles
 do
-    # ln -sfnv $DOTPATH/${f} $HOME/${f}
-    cp -s $DOTPATH/${f} $HOME/${f}
+    ln -sfnv $DOTPATH/${f} $HOME/${f}
+    # cp $DOTPATH/${f} $HOME/${f}
 done
