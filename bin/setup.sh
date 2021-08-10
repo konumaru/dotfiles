@@ -15,11 +15,10 @@ else
   exit 1
 fi
 
-sh $DOTPATH/bin/install.sh
+sh $DOTPATH/bin/brew_setup.sh
 
 dotfiles=(.zshrc)
 for f in $dotfiles
 do
     ln -sfnv $DOTPATH/${f} $HOME/${f}
-    # cp $DOTPATH/${f} $HOME/${f}
 done
