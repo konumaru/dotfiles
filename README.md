@@ -8,6 +8,7 @@
 - Command line tools for xcode
 - [Homebrew](https://brew.sh/index_ja)
 - [Zinit](https://github.com/zdharma/zinit)
+- [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 ## Usage
 
@@ -20,4 +21,8 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 - [Homebrew](Brewfile)
 - [iterm2](com.googlecode.iterm2.plist)
   - ![iterm2_setting](img/iterm2_setting.png)
-- [zsh](.zshrc)
+- zsh
+  - [zshrc](.zshrc)
+  - [zprofile](.zprofile)
+- [tmux](https://github.com/tmux/tmux)
+- [neovim](https://github.com/neovim/neovim)
