@@ -13,3 +13,10 @@
 ```sh
 bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
 ```
+
+
+## Description for setting files
+
+- [Homebrew](Brewfile)
+- [iterm2](com.googlecode.iterm2.plist)
+  - ![iterm2_setting](img/iterm2_setting.png)
