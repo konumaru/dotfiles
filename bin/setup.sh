@@ -17,8 +17,8 @@ fi
 
 sh $DOTPATH/bin/brew_setup.sh
 
-dotfiles=(.zshrc, .zprofile)
-for f in $dotfiles
+dotfiles=(.zshrc .zprofile)
+for f in ${dotfiles[@]}
 do
-    ln -sfnv $DOTPATH/${f} $HOME/${f}
+  ln -sfnv $DOTPATH/${f} $HOME/${f}
 done
