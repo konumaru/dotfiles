@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AutoHideTmuxClientSession</key>
+	<false/>
 	<key>Control</key>
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
@@ -1081,6 +1083,8 @@
 			<string>/Users/rui</string>
 		</dict>
 	</array>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>0</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
