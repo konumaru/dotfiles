@@ -15,9 +15,17 @@ else
   exit 1
 fi
 
-sh $DOTPATH/bin/brew_setup.sh
+# Install Homebrew
+## Install homebrew when it was not installed
+if type brew >/dev/null 2>&1; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+## Install packages from Brewfile
+brew bundle --file=Brewfile
 
-dotfiles=(.zshrc .zprofile)
+
+# Creat symbolic links
+dotfiles=(.zshrc .zprofile .tmux.conf)
 for f in ${dotfiles[@]}
 do
   ln -sfnv $DOTPATH/${f} $HOME/${f}
