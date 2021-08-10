@@ -3,7 +3,6 @@
 DOTPATH=~/dotfiles
 GITHUB_URL=https://github.com/konumaru/dotfiles
 
-
 # Clone this repository
 if type "git" > /dev/null 2>&1; then
   if [ -d $DOTPATH ]; then
@@ -16,4 +15,11 @@ else
   exit 1
 fi
 
-sh $DOTPATH/bin/setup.sh
+sh $DOTPATH/bin/install.sh
+
+dotfiles=(.zshrc)
+for f in $dotfiles
+do
+    # ln -sfnv $DOTPATH/${f} $HOME/${f}
+    cp -s $DOTPATH/${f} $HOME/${f}
+done

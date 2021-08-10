@@ -14,7 +14,7 @@
         "revision": "7696639907de17c98bef73c485f1c521fd21e833"
       },
       "homebrew/core": {
-        "revision": "bada3dfa842720e298c9e3811207d88743636142"
+        "revision": "fb7013ba7acf449dde509addffc9f999b5998de8"
       }
     },
     "brew": {
@@ -414,9 +414,6 @@
               "sha256": "927529c05c83d23e433e4ac4dee94dce9b174101b80732a99726942e705ad35f"
             }
           }
-        },
-        "options": {
-          "link": false
         }
       },
       "docker-compose": {
@@ -1908,7 +1905,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "bada3dfa842720e298c9e3811207d88743636142",
+        "Homebrew/homebrew-core": "fb7013ba7acf449dde509addffc9f999b5998de8",
         "CLT": "12.5.0.22.11",
         "Xcode": "12.5.1",
         "macOS": "11.5.1"
