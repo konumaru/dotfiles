@@ -41,6 +41,7 @@ zinit light sindresorhus/pure
 alias cdd='cd /Users/rui/Documents'
 # alias cdr='cd /Users/rui/Repro'
 alias ls='ls -al'
+alias vim='nvim'
 
 ## zsh
 export HISTSIZE=1000
