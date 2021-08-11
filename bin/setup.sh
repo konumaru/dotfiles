@@ -25,8 +25,11 @@ brew bundle --file=Brewfile --no-lock
 
 
 # Creat symbolic links
-dotfiles=(.zshrc .zprofile .zshenv .tmux.conf nvim)
+dotfiles=(.zshrc .zprofile .zshenv .tmux.conf)
 for f in ${dotfiles[@]}
 do
   ln -sfnv $DOTPATH/${f} $HOME/${f}
 done
+## Newovim
+XDG_CONFIG_HOME=$HOME/.config
+ln -sfnv $DOTPATH/nvim $XDG_CONFIG_HOME/nvim
