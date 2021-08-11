@@ -9,6 +9,8 @@ hook_add = '''
 [[plugins]]
 repo = 'cespare/vim-toml'
 repo = 'scrooloose/syntastic'
+repo = 'prabirshrestha/vim-lsp'
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo='scrooloose/nerdtree'

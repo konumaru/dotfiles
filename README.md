@@ -25,5 +25,4 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 - zsh
   - [zshrc](.zshrc)
   - [zprofile](.zprofile)
-- [tmux](.tmux.conf)
 - [neovim](nvim)
