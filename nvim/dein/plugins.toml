@@ -1,16 +1,15 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-    let g:lightline = {'colorscheme': 'wombat'}
-'''
+repo = 'cespare/vim-toml'
 
 [[plugins]]
-repo = 'cespare/vim-toml'
-repo = 'scrooloose/syntastic'
-repo = 'prabirshrestha/vim-lsp'
-repo = 'mattn/vim-lsp-settings'
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'
+hook_source = '''
+call coil398#init#coc#hook_source()
+'''
+
 
 [[plugins]]
 repo='scrooloose/nerdtree'
@@ -27,4 +26,13 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 map <C-l> gt
 map <C-h> gT
+'''
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+hook_add = '''
+let g:vim_markdown_folding_disabled = 1  " 自動折り畳みを無効
+let g:vim_markdown_toc_autofit = 1
+set conceallevel=2  " 構文の隠蔽
 '''
