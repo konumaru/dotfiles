@@ -2,7 +2,7 @@ name: Monthly Backup
 on:
   schedule:
     # 毎月第一火曜日の 15:00 (JST) に処理を実行する。
-    - cron: "0 6 1-7 * *"
+    - cron: "0 6 1 * *"
 jobs:
   create_issue:
     name: create-monthy-backup-issue
