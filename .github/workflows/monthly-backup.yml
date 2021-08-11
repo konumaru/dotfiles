@@ -1,5 +1,6 @@
 name: Monthly Backup
 on:
+  workflow_dispatch:
   schedule:
     # 毎月第一火曜日の 15:00 (JST) に処理を実行する。
     - cron: "0 6 1-7 * 2"
@@ -20,7 +21,7 @@ jobs:
             ## Todo
 
             Please run the following command to update the backup file.
-            Then, reflect it to the remote repository.
+            And, reflect it to the remote repository.
 
             ```
             % make backup
