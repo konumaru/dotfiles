@@ -1,0 +1,35 @@
+name: Monthly Backup
+on:
+  schedule:
+    # 毎月第一火曜日の 15:00 (JST) に処理を実行する。
+    - cron: "0 6 1-7 * 2"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        uses: imjohnbo/issue-bot@v3.0
+        with:
+          assignees: "konumaru"
+          labels: "monthly backup"
+          title: "Monthly Backup"
+          body: |
+            ## Todo
+
+            Please run the following command to update the backup file.
+            Then, reflect it to the remote repository.
+
+            ```
+            % make backup
+
+            # And push to remote repository
+            % git add -A
+            % git commit -m '[backup] yyyy-mm-dd'
+            % git push origin main
+            ```
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
