@@ -13,6 +13,7 @@ jobs:
       - name: Create team sync issue
         uses: imjohnbo/issue-bot@v3.0
         with:
+          assignees: "konumaru"
           labels: "monthly backup"
           title: "Monthly Backup"
           body: |
