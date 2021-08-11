@@ -9,6 +9,7 @@
 - [Homebrew](https://brew.sh/index_ja)
 - [Zinit](https://github.com/zdharma/zinit)
 - [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+- [dein.vim](https://github.com/Shougo/dein.vim)
 
 ## Usage
 
@@ -24,5 +25,5 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 - zsh
   - [zshrc](.zshrc)
   - [zprofile](.zprofile)
-- [tmux](https://github.com/tmux/tmux)
-- [neovim](https://github.com/neovim/neovim)
+- [tmux](.tmux.conf)
+- [neovim](nvim)

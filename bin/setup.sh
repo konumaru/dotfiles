@@ -33,3 +33,6 @@ done
 ## Newovim
 XDG_CONFIG_HOME=$HOME/.config
 ln -sfnv $DOTPATH/nvim $XDG_CONFIG_HOME/nvim
+
+pip install -U pip
+pip install flake8-docstrings

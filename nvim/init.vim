@@ -11,6 +11,9 @@ let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let $CONFIG = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
 let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOME
 
+let g:python_host_prog = '$HOME/.pyenv/shims/python'
+let g:python3_host_prog = '$HOME/.pyenv/shims/python3'
+
 " Load rc file
 function! s:load(file) abort
     let s:path = expand('$CONFIG/nvim/' . a:file)
@@ -22,6 +25,9 @@ endfunction
 
 call s:load('rc/plugins.vim')
 
+" Required:
+filetype plugin indent on
+syntax enable
 
 "*****************************************************************************
 "" Basic Setup
@@ -60,10 +66,13 @@ set fileformats=unix,dos,mac
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
+set hls
+set list
+set wrap
 set number
 set splitright
-set hls
-set cc=120
+set textwidth=0
+set colorcolumn=120
 
 
 "*****************************************************************************

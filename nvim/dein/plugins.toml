@@ -1,5 +1,14 @@
 [[plugins]]
-repo='tomasr/molokai'
+repo = 'Shougo/dein.vim'
+
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {'colorscheme': 'wombat'}
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo='scrooloose/nerdtree'

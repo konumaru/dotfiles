@@ -1,0 +1,34 @@
+# dein.vim command
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+on_cmd = 'Dein'
+
+# Python plugins """"""""""""""""""""""""""""""""""""""""""""""
+[[plugins]]
+repo = 'fisadev/vim-isort'
+on_ft = ['python']
+
+[[plugins]]
+on_ft = ['python']
+repo = 'a-vrma/black-nvim'
+
+[[plugins]]
+on_ft = ['python']
+repo = 'nvie/vim-flake8'
+hook_add = '''
+    autocmd BufWritePost *.py call Flake8()
+    let g:syntastic_python_checkers = ["flake8"]
+    let g:flake8_show_in_gutter=1
+    let g:flake8_show_in_file=1
+'''
+
+[[plugins]]
+on_ft = ['python']
+repo='Vimjas/vim-python-pep8-indent'
+
+[[plugins]]
+on_ft = ['python']
+repo = 'davidhalter/jedi-vim'
+hook_add = '''
+    let g:jedi#environment_path = "venv"
+'''
