@@ -29,25 +29,17 @@ map <C-h> gT
 '''
 
 [[plugins]]
-repo = 'plasticboy/vim-markdown'
-on_ft = ['markdown']
-hook_add = '''
-let g:vim_markdown_folding_disabled = 1  " 自動折り畳みを無効
-let g:vim_markdown_toc_autofit = 1
-set conceallevel=2  " 構文の隠蔽
-'''
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
+hook_add = '''
+set laststatus=2
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#wordcount#enabled = 0
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
 let g:airline_theme = 'wombat'
-set laststatus=2
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#wordcount#enabled = 0
-let g:airline#extensions#whitespace#enabled = 1
 '''
 
