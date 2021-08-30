@@ -33,14 +33,14 @@ zinit light 'b4b4r07/enhancd'
 zinit load 'junegunn/fzf-bin'
 zinit load 'zdharma/history-search-multi-word'
 ## Load pure theme
-zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
 
 # alias
 alias cdd='cd /Users/rui/Documents'
 # alias cdr='cd /Users/rui/Repro'
-alias ls='ls -al'
+alias ls='ls -alh'
 alias vim='nvim'
 
 ## zsh
