@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     # 毎月第一火曜日の 15:00 (JST) に処理を実行する。
-    -cron:  '0 0 1 */3 *'
+    -cron: "0 0 1 */3 *"
 jobs:
   create_issue:
     name: create-monthy-backup-issue
