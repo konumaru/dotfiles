@@ -5,7 +5,6 @@ export PATH=/Library/TeX/texbin:$PATH
 ## ruby
 ### rbenv
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
-eval "$(rbenv init -)"
 ### gem
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
@@ -14,14 +13,12 @@ export PATH=$GEM_HOME/bin:$PATH
 ### pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 ### poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
 ## javascript
 ### nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
 
 ## GCP
 # The next line updates PATH for the Google Cloud SDK.
@@ -29,9 +26,6 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.i
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
-
-export GOOGLE_APPLICATION_CREDENTIALS=~/.ssh/repro-lab-9cbbf157d212.json
-export GCP_CREDENTIAL=/Users/rui/.ssh/repro-lab-9cbbf157d212.json
 
 function gconf() {
   projData=$(gcloud config configurations list | peco)
