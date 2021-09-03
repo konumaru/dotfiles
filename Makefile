@@ -5,7 +5,7 @@ setup:
 
 backup:
 	bash -c bin/backup.sh
-
+	# Upload to github
 	git add -A
 	git commit -m "[backup] ${today}"
 	git push origin main
