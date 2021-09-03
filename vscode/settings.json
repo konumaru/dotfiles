@@ -13,7 +13,7 @@
         "black"
     ],
     "python.linting.flake8Args": [
-        "--ignore=E24,E203,W504,E401,E402,E501,F401,F403,F841,W503",
+        "--ignore=E24,E203,W504,E401,E402,E501,F401,F403,F841,W503,E999",
         "--verbose"
     ],
     "[python]": {
