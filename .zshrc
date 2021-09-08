@@ -36,10 +36,10 @@ zinit load 'zdharma/history-search-multi-word'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-
 # alias
-alias cdd='cd /Users/rui/Documents'
-# alias cdr='cd /Users/rui/Repro'
+USERNAME=$(whoami)
+alias cdd='cd /Users/${USERNAME}/Documents'
+alias cdr='cd /Users/${USERNAME}/note'
 alias ls='ls -alh'
 alias vim='nvim'
 
@@ -74,7 +74,3 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
-# Anyenv
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-eval "$(nodenv init -)"

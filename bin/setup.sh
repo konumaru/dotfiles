@@ -40,3 +40,7 @@ pip install 'python-language-server[all]' pyls-black pyls-mypy
 
 # Vscode
 ln -sfnv $DOTPATH/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+
+# Poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+poetry completions zsh > ~/.zprezto/modules/completion/external/src/_poetry
