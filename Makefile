@@ -9,3 +9,9 @@ backup:
 	git add -A
 	git commit -m "[backup] ${today}"
 	git push origin main
+
+test:
+	echo "Hello"
+
+setup-win:
+	New-Item -Path 'C:\Users\konum\Documents\repositories\dotfiles' -Value 'C:\Users\konum\Documents\repositories\dotfiles\profile.ps1' -Name 'C:\Users\konum\Documents\repositories\dotfiles\profile.ps1.symlink' -ItemType SymbolicLink
