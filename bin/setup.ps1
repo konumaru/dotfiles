@@ -43,15 +43,20 @@ $SCOOP_PACKAGES = @(
   "vscode"
   "slack"
   "discord"
-  "googlechrome"
+  "steam"
+  # "googlechrome"
+  # Font
+  "Cascadia-Code"
 )
 
 scoop install git
 scoop update
 scoop bucket add extras
 scoop bucket add versions
+scoop bucket add nerd-fonts
 scoop update *
 scoop install $SCOOP_PACKAGES
+scoop update $SCOOP_PACKAGES
 scoop cache rm *
 
 # PowerShell の見た目をいい感じにする
@@ -59,12 +64,7 @@ Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 Install-Module ZLocation -Scope CurrentUser
 Install-Module PSFzf -Scope CurrentUser
-
-# profile
-## Windows Powershell
-# $Profile_Dir = Split-Path $PROFILE.CurrentUserCurrentHost -Parent
-# sudo Copy-Item -ItemType SymbolicLink -Path $Profile_Dir -Name Microsoft.PowerShell_profile.ps1 -Value .\win\profile.ps1 -Force
-
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
 # Make custom directories
 # ssh
@@ -82,4 +82,10 @@ git clone https://github.com/konumaru/dotfiles.git
 
 # profile.ps1 を profile にロードさせる
 $Currrent_Dir = Convert-Path .
-sudo Write-Output ". $Currrent_Dir\win\profile.ps1" > $PROFILE.CurrentUserCurrentHost
+Write-Output ". $Currrent_Dir\win\profile.ps1" > $PROFILE.CurrentUserCurrentHost
+
+git config --global user.name "konumaru"
+git config --global user.email "konumaru1022@gmail.com"
+
+# Ref:
+# https://secon.dev/entry/2020/08/17/070735/

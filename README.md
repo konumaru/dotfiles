@@ -26,6 +26,13 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 Invoke-Expression "$(Invoke-WebRequest https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1 -UseBasicParsing)"
 ```
 
+#### Manual required setup
+
+- Install Google Chrome
+- Setup WSL
+- Login 1password
+- Install Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
+
 ## Description for setting files
 
 - [Homebrew](Brewfile)
