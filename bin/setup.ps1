@@ -71,14 +71,18 @@ Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 New-Item -Path $env:USERPROFILE\.ssh -Force -ItemType Directory
 # Under ~/Documents
 New-Item -Path $env:USERPROFILE\Documents -Force -ItemType Directory
-New-Item -Path $env:USERPROFILE\Documents\repositories -Force -ItemType Directory
-New-Item -Path $env:USERPROFILE\Documents\memo -Force -ItemType Directory
-New-Item -Path $env:USERPROFILE\Documents\memo\memo.md -Force -ItemType File
+if((Test-Path $env:USERPROFILE\Documents\repositories) -eq "False"){
+  New-Item -Path $env:USERPROFILE\Documents\repositories -Force -ItemType Directory
+  New-Item -Path $env:USERPROFILE\Documents\memo -Force -ItemType Directory
+  New-Item -Path $env:USERPROFILE\Documents\memo\memo.md -Force -ItemType File
+}
 
 
 # dotfiles を git clone する
 Set-Location $env:USERPROFILE\Documents\repositories
-git clone https://github.com/konumaru/dotfiles.git
+if((Test-Path $env:USERPROFILE\Documents\repositories\dotfiles) -eq "False"){
+  git clone https://github.com/konumaru/dotfiles.git
+}
 
 # profile.ps1 を profile にロードさせる
 $Currrent_Dir = Convert-Path .
@@ -86,6 +90,9 @@ Write-Output ". $Currrent_Dir\win\profile.ps1" > $PROFILE.CurrentUserCurrentHost
 
 git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
+
+# TODO: Install WSL
+# NOTE: https://github.com/jiro4989/dotfiles
 
 # Ref:
 # https://secon.dev/entry/2020/08/17/070735/
