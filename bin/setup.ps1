@@ -85,8 +85,8 @@ if((Test-Path $env:USERPROFILE\Documents\repositories\dotfiles) -eq "False"){
 }
 
 # profile.ps1 を profile にロードさせる
-$Currrent_Dir = Convert-Path .
-Write-Output ". $Currrent_Dir\win\profile.ps1" > $PROFILE.CurrentUserCurrentHost
+Set-Location $env:USERPROFILE\Documents\repositories\dotfiles
+Write-Output ". $env:USERPROFILE\Documents\repositories\dotfiles\win\profile.ps1" > $PROFILE.CurrentUserCurrentHost
 
 git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
