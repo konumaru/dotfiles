@@ -77,6 +77,8 @@ New-Item -Path $env:USERPROFILE\Documents\memo\memo.md -Force -ItemType File
 
 
 # dotfiles を git clone する
+Set-Location $env:USERPROFILE\Documents\repositories
+git clone https://github.com/konumaru/dotfiles.git
 
 # profile.ps1 を profile にロードさせる
 $Currrent_Dir = Convert-Path .

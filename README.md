@@ -15,13 +15,15 @@
 ## Usage
 
 ### Mac
+
 ```sh
 bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.sh)"
 ```
 
 ### Windows
-```
-Invoke-Expression "$(Invoke-WebRequest https://raw.githubusercontent.com/konumaru/dotfiles/main/test.bat -UseBasicParsing)"
+
+```ps1
+Invoke-Expression "$(Invoke-WebRequest https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1 -UseBasicParsing)"
 ```
 
 ## Description for setting files
