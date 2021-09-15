@@ -32,8 +32,9 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.
 
 #### Manual required setup
 
-- Setup WSL
-- Install Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
+- WSL
+- Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
+- Studio One
 
 ## Description for setting files
 
