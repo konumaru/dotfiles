@@ -32,9 +32,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.
 
 #### Manual required setup
 
-- Install Google Chrome
 - Setup WSL
-- Login 1password
 - Install Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
 
 ## Description for setting files
