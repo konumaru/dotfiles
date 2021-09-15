@@ -1,5 +1,10 @@
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
+# Disable "User Account Control"
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "ConsentPromptBehaviorAdmin" -Value 0
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "PromptOnSecureDesktop" -Value 0
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "EnableLUA" -Value 0
+
 # Install winget and git
 try {
   Get-Command -Name winget -ErrorAction Stop
@@ -54,3 +59,9 @@ winget import -i win/winget_packages.json
 
 # Ref:
 # https://secon.dev/entry/2020/08/17/070735/
+
+
+# Enable "User Account Control"
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "ConsentPromptBehaviorAdmin" -Value 2
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "PromptOnSecureDesktop" -Value 1
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "EnableLUA" -Value 1

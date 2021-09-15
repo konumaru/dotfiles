@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2021-09-16T01:25:46.703-00:00",
+	"CreationDate" : "2021-09-16T03:41:18.767-00:00",
 	"Sources" : 
 	[
 		{
@@ -55,6 +55,9 @@
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x64"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x86"
 				},
 				{
@@ -62,9 +65,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x64"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"

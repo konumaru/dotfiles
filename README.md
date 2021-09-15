@@ -22,9 +22,10 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 
 ### Windows
 
-Fisrt Manualy install apps below:
+Required operations in advance:
 
-- [winget](https://docs.microsoft.com/ja-jp/windows/package-manager/winget/)
+- Change font of powershell `Consolas` to `MS ゴシック`
+  - This is the operation required to display Japanese.
 
 ```ps1
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1')
