@@ -1,63 +1,17 @@
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
-# Install Scoop
+# Install apps
 try {
-  Get-Command -Name scoop -ErrorAction Stop
+  Get-Command -Name winget -ErrorAction Stop
 }
 catch [System.Management.Automation.CommandNotFoundException] {
-  Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+  # NOTE: Latest version is here, https://github.com/microsoft/winget-cli/releases/latest
+  # Rewrite Uri https://~~.msixbundle if update to latest version.
+  Invoke-WebRequest -Uri https://github.com/microsoft/winget-cli/releases/download/v1.0.11692/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile winget.msixbundle -UseBasicParsing
+  Add-AppPackage -Path winget.msixbundle
+  rm winget.msixbundle
 }
-
-$SCOOP_PACKAGES = @(
-  "aria2"
-  "7zip"
-  "bat"
-  "concfg"
-  "emacs"
-  "everything"
-  "fd"
-  "fzf"
-  "gawk"
-  "ghq"
-  "git"
-  "go"
-  "gzip"
-  "hub"
-  "jq"
-  "less"
-  "mpc-be"
-  "nodejs-lts"
-  "win32-openssh"
-  "powertoys"
-  "pshazz"
-  "pt"
-  "pwsh"
-  "ripgrep"
-  "ruby"
-  "sed"
-  "sudo"
-  "sysinternals"
-  "tar"
-  "uutils-coreutils"
-  "windows-terminal"
-  "vscode"
-  "slack"
-  "discord"
-  "steam"
-  # "googlechrome"
-  # Font
-  "Cascadia-Code"
-)
-
-scoop install git
-scoop update
-scoop bucket add extras
-scoop bucket add versions
-scoop bucket add nerd-fonts
-scoop update *
-scoop install $SCOOP_PACKAGES
-scoop update $SCOOP_PACKAGES
-scoop cache rm *
+winget import -i win/winget_packages.json
 
 # PowerShell の見た目をいい感じにする
 Install-Module posh-git -Scope CurrentUser
@@ -76,7 +30,6 @@ if((Test-Path $env:USERPROFILE\Documents\repositories) -eq "False"){
   New-Item -Path $env:USERPROFILE\Documents\memo -Force -ItemType Directory
   New-Item -Path $env:USERPROFILE\Documents\memo\memo.md -Force -ItemType File
 }
-
 
 # dotfiles を git clone する
 Set-Location $env:USERPROFILE\Documents\repositories

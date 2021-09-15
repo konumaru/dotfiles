@@ -22,9 +22,12 @@ bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/
 
 ### Windows
 
+Fisrt Manualy install apps below:
+
+- [winget](https://docs.microsoft.com/ja-jp/windows/package-manager/winget/)
+
 ```ps1
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-Invoke-Expression "$(Invoke-WebRequest https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1 -UseBasicParsing)"
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1')
 ```
 
 #### Manual required setup
