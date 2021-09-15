@@ -1,6 +1,6 @@
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
-# Install apps
+# Install winget and git
 try {
   Get-Command -Name winget -ErrorAction Stop
 }
@@ -11,7 +11,8 @@ catch [System.Management.Automation.CommandNotFoundException] {
   Add-AppPackage -Path winget.msixbundle
   rm winget.msixbundle
 }
-winget import -i win/winget_packages.json
+winget install -e id Git.Git
+
 
 # PowerShell の見た目をいい感じにする
 Install-Module posh-git -Scope CurrentUser
@@ -43,6 +44,10 @@ Write-Output ". $env:USERPROFILE\Documents\repositories\dotfiles\win\profile.ps1
 
 git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
+
+# Install apps
+winget import -i win/winget_packages.json
+
 
 # TODO: Install WSL
 # NOTE: https://github.com/jiro4989/dotfiles
