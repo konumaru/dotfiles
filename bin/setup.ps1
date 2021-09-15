@@ -11,7 +11,7 @@ catch [System.Management.Automation.CommandNotFoundException] {
   Add-AppPackage -Path winget.msixbundle
   rm winget.msixbundle
 }
-winget install -e id Git.Git
+winget install -e --id Git.Git
 
 
 # PowerShell の見た目をいい感じにする
