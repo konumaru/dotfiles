@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2021-09-16T04:25:14.308-00:00",
+	"CreationDate" : "2021-09-19T11:48:40.469-00:00",
 	"Sources" : 
 	[
 		{
@@ -65,6 +65,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Google.JapaneseIME"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"

@@ -1,4 +1,4 @@
-#Include, gtk-emacs-theme-like.ahk
+; #Include, gtk-emacs-theme-like.ahk
 
 ; LWin を WCtrl に置換
 LWin::Control

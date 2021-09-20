@@ -15,3 +15,5 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 # Ctrl + d で Exit
 Import-Module PSReadLine
 Set-PSReadlineKeyHandler -Key ctrl+d -Function DeleteCharOrExit
+
+$ENV:Path += ";$env:USERPROFILE\.poetry\bin"
