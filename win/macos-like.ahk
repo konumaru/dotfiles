@@ -1,7 +1,7 @@
 ; #Include, gtk-emacs-theme-like.ahk
 
 ; LWin を WCtrl に置換
-LWin::Control
+; LWin::Control
 
 ; ブラウザのタブ移動を左手でできるようにする
 LAlt & q:: Send, ^{PgUp}    ; 左 Alt + q → Ctrl + PageUp
