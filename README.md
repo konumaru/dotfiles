@@ -17,7 +17,13 @@
 ### Mac
 
 ```sh
-bash -c "$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.sh)"
+bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
+```
+
+### Ubuntu
+
+```sh
+bash -c "$(wget -qO https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
 
 ### Windows
@@ -36,13 +42,3 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.
 - WSL
 - Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
 - Studio One
-
-## Description for setting files
-
-- [Homebrew](Brewfile)
-- [iterm2](com.googlecode.iterm2.plist)
-  - ![iterm2_setting](img/iterm2_setting.png)
-- zsh
-  - [zshrc](.zshrc)
-  - [zprofile](.zprofile)
-- [neovim](nvim)

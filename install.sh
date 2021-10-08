@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 DOTPATH=~/.dotfiles
 GITHUB_URL=https://github.com/konumaru/dotfiles
@@ -15,21 +15,24 @@ else
   exit 1
 fi
 
+# Check os and run setup.sh
 case ${OSTYPE} in 
-    darwin*)
-        echo "Running on MacOS"
-        #TODO: run install script of macos.
-        ;;
-    linux*)
-        if   [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
-            # Check Ubuntu or Debian
-            if [ -e /etc/lsb-release ]; then
-            # Ubuntu
-            echo "Running on Ubuntu"
-            distri_name="ubuntu"
-        else
-            # Other
-            echo "unkown distribution"
-            distri_name="unkown"
-        fi
+  darwin*)
+    echo "Running on MacOS"
+    #TODO: run install script of macos.
+    ;;
+  linux*)
+    if [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
+      # Check Ubuntu or Debian
+      if [ -e /etc/lsb-release ]; then
+        # Ubuntu
+        echo "Running on Ubuntu"
+        distri_name="ubuntu"
+      fi
+    else
+      # Other
+      echo "unkown distribution"
+      distri_name="unkown"
+    fi
+    ;;
 esac
