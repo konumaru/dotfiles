@@ -23,7 +23,7 @@ bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/in
 ### Ubuntu
 
 ```sh
-bash -c "$(wget -qO https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
+bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
 
 ### Windows
