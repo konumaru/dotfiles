@@ -1,17 +1,21 @@
-today = ${shell date '+%Y_%m_%d'}
+EXCLUSIONS := .DS_Store .git .github .gitmodules
+CANDIDATES := $(wildcard .??*) # bin
+DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
+DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
-setup:
-	bash -c "$$(curl -L https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.sh)"
+TODAY      := ${shell date '+%Y_%m_%d'}
+
+deploy:
+	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+
+init:
+	echo "Init"
+
+list:
+	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
 
 backup:
-	bash -c bin/backup.sh
 	# Upload to github
 	git add -A
-	git commit -m "[backup] ${today}"
+	git commit -m "[backup] ${TODAY}"
 	git push origin main
-
-test:
-	echo "Hello"
-
-setup-win:
-	New-Item -Path 'C:\Users\konum\Documents\repositories\dotfiles' -Value 'C:\Users\konum\Documents\repositories\dotfiles\profile.ps1' -Name 'C:\Users\konum\Documents\repositories\dotfiles\profile.ps1.symlink' -ItemType SymbolicLink
