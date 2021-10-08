@@ -16,7 +16,7 @@ else
 fi
 
 # Check os and run setup.sh
-case ${OSTYPE} in 
+case ${OSTYPE} in
   darwin*)
     echo "Running on MacOS"
     #TODO: run install script of macos.
@@ -38,3 +38,6 @@ case ${OSTYPE} in
     fi
     ;;
 esac
+
+# Create symlink to home directory
+make deploy
