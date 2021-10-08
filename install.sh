@@ -28,6 +28,8 @@ case ${OSTYPE} in
         # Ubuntu
         echo "Running on Ubuntu"
         distri_name="ubuntu"
+
+        sudo sh ./etc/ubuntu/setup.sh
       fi
     else
       # Other
