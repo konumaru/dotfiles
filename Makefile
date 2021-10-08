@@ -5,14 +5,19 @@ DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
 TODAY      := ${shell date '+%Y_%m_%d'}
 
-deploy:
+deploy: ## Create symlink to home directory
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 
-init:
-	echo "Init"
 
-list:
+list: ## Show dot files in this repo
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
+
+
+clean: ## Remove the dot files and this repo
+	@echo 'Remove dot files in your home directory...'
+	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
+	-rm -rf $(DOTPATH)
+
 
 backup:
 	# Upload to github
