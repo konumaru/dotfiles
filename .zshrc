@@ -38,8 +38,7 @@ zinit light sindresorhus/pure
 
 # alias
 USERNAME=$(whoami)
-alias cdd='cd /Users/${USERNAME}/Documents'
-alias cdr='cd /Users/${USERNAME}/note'
+alias cdd='cd ${HOME}/Documents'
 alias ls='ls -alh'
 alias vim='nvim'
 
