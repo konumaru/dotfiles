@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "Hello world!"
+sudo add-apt-repository ppa:neovim-ppa/stable
 
-sudo apt update -y
-sudo apt upgrade -y
 sudo apt install -y \
     build-essential \
     libffi-dev \
@@ -11,19 +9,20 @@ sudo apt install -y \
     zlib1g-dev \
     liblzma-dev \
     libbz2-dev \
+    libdb-dev \
     libreadline-dev \
     libsqlite3-dev \
     libopencv-dev \
     tk-dev \
-    git \
-    zsh
+    python3-pip \
+    python3-rev \
+    neovim
 
-sudo apt autoremove -y
+
+ apt autoremove -y
 
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-
 
 chsh -s $(which zsh)

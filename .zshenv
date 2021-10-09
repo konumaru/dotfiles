@@ -15,3 +15,4 @@ export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
 ## Neovim
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
