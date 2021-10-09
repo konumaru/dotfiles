@@ -2,6 +2,8 @@
 
 sudo add-apt-repository ppa:neovim-ppa/stable
 
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install -y \
     build-essential \
     libffi-dev \
@@ -14,15 +16,23 @@ sudo apt install -y \
     libsqlite3-dev \
     libopencv-dev \
     tk-dev \
+    curl \
     python3-pip \
-    python3-rev \
-    neovim
+    python3-dev \
+    neovim \
+    tmux \
+    tree
 
+apt autoremove -y
 
- apt autoremove -y
+# Change default shell to zsh.
+chsh -s $(which zsh)
 
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-chsh -s $(which zsh)
+
+# Install applications
+sh ./etc/ubuntu/install_apps.sh
+
