@@ -21,7 +21,10 @@ sudo apt install -y \
     python3-dev \
     neovim \
     tmux \
-    tree
+    tree \
+    fonts-noto-cjk \
+    fonts-noto-cjk-extra
+
 
 apt autoremove -y
 
@@ -35,4 +38,3 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 # Install applications
 sh ./etc/ubuntu/install_apps.sh
-
