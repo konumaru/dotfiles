@@ -24,3 +24,7 @@ backup:
 	git add -A
 	git commit -m "[backup] ${TODAY}"
 	git push origin main
+
+
+gen-github-sshkey:
+	./etc/set_github_ssh_key.sh

@@ -37,6 +37,12 @@ Required operations in advance:
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/setup.ps1')
 ```
 
+### Register sshkey on github
+
+```sh
+make gen-github-sshkey
+```
+
 #### Manual required setup
 
 - WSL

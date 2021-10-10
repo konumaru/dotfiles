@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Ref: https://github.com/alrra/dotfiles/blob/main/src/os/set_github_ssh_key.sh
+
 cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "utils.sh"
 
