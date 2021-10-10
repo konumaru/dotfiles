@@ -12,7 +12,7 @@ sudo apt install -y \
     liblzma-dev \
     libbz2-dev \
     libdb-dev \
-    libreadline-dev \
+    libedit-dev \
     libsqlite3-dev \
     libopencv-dev \
     tk-dev \
@@ -20,6 +20,7 @@ sudo apt install -y \
     ibus-mozc \
     python3-pip \
     python3-dev \
+    python-is-python3 \
     neovim \
     tmux \
     tree \
@@ -40,6 +41,9 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'jp'), ('ibus', 
 # Install font, jetbrains mono.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
+# Sync timezone at startup.
+timedatectl set-local-rtc 1
+
 
 # Change default shell to zsh.
 chsh -s $(which zsh)
@@ -47,7 +51,17 @@ chsh -s $(which zsh)
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+pyenv install 3.9.7
+pyenv global 3.9.7
+
+# Install poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 
 # Install applications
 sh ./etc/ubuntu/install_apps.sh
+
+# Install nvidia-driver
+sh ./etc/ubuntu/install_nvidia_driver.sh
+
+

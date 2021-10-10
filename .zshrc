@@ -42,6 +42,9 @@ alias cdd='cd ${HOME}/Documents'
 alias ls='ls -alh'
 alias vim='nvim'
 
+# alias python="python3"
+# alias pip="pip3"
+
 ## zsh
 export HISTSIZE=1000
 export SAVEHIST=100000
@@ -72,4 +75,3 @@ setopt complete_in_word
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-
