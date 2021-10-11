@@ -69,3 +69,7 @@ sh ./etc/ubuntu/install_nvidia_driver.sh
 dconf load $(PWD)/backups/ubuntu-20.04/ < /
 
 
+# Restart
+sudo reboot
+
+
