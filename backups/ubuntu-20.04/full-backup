@@ -1,0 +1,213 @@
+[apps/seahorse/windows/key-manager]
+height=476
+width=600
+
+[apps/update-manager]
+launch-count=1
+launch-time=int64 1633626277
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1633626270
+
+[org/gnome/control-center]
+last-panel='datetime'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2021-10-07T23:57:15+00'
+
+[org/gnome/deja-dup/file]
+migrated=true
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gucharmap.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Screenshot.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'simple-scan.desktop', 'vinagre.desktop', 'yelp.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+primary-color='#2c001e'
+secondary-color='#2c001e'
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+per-window=false
+show-all-sources=false
+sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+clock-show-date=true
+clock-show-seconds=false
+clock-show-weekday=true
+document-font-name='Noto Sans CJK JP 11'
+enable-hot-corners=true
+font-name='Noto Sans CJK JP 11'
+gtk-im-module='ibus'
+gtk-key-theme='Emacs'
+gtk-theme='Yaru'
+locate-pointer=false
+show-battery-percentage=false
+
+[org/gnome/desktop/notifications]
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome']
+show-banners=true
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/mouse]
+speed=-0.022058823529411797
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='fingers'
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+disable-microphone=false
+report-technical-problems=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+lock-delay=uint32 0
+lock-enabled=false
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+primary-color='#2c001e'
+secondary-color='#2c001e'
+ubuntu-lock-on-suspend=false
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 900
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+
+[org/gnome/desktop/wm/preferences]
+action-right-click-titlebar='menu'
+button-layout='close,minimize,maximize:'
+titlebar-font='Noto Sans CJK JP 11'
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
+[org/gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[org/gnome/gnome-system-monitor]
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(700, 500, 72, 50)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[org/gnome/mutter]
+overlay-key='Super_L'
+workspaces-only-on-primary=true
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-temperature=uint32 3700
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[org/gnome/settings-daemon/plugins/xsettings]
+hinting='slight'
+
+[org/gnome/shell]
+app-picker-view=uint32 0
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'desktop-icons@csoriano', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Move_Clock@rmy.pobox.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop']
+
+[org/gnome/shell/extensions/dash-to-dock]
+preferred-monitor=0
+
+[org/gnome/shell/extensions/desktop-icons]
+icon-size='small'
+show-home=false
+show-trash=false
+
+[org/gnome/shell/extensions/extensions]
+position='panel'
+show-add=true
+
+[org/gnome/software]
+check-timestamp=int64 1633954793
+online-updates-timestamp=int64 1633626439
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gnome/terminal/legacy]
+new-terminal-mode='tab'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+default-size-columns=128
+default-size-rows=40
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=172
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+window-position=(2112, 597)
+window-size=(1231, 902)

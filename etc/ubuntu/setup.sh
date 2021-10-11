@@ -25,6 +25,7 @@ sudo apt install -y \
     tmux \
     tree \
     gnome-tweak-tool \
+    chrome-gnome-shell \
     powertop tlp tlp-rdw
     fonts-noto-cjk \
     fonts-noto-cjk-extra \
@@ -63,5 +64,8 @@ sh ./etc/ubuntu/install_apps.sh
 
 # Install nvidia-driver
 sh ./etc/ubuntu/install_nvidia_driver.sh
+
+# Apply ubuntu and gnome settings.
+dconf load $(PWD)/backups/ubuntu-20.04/ < /
 
 
