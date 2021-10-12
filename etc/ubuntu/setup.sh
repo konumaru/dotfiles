@@ -24,6 +24,8 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
+    imwheel \
+    i3 \
     gnome-tweak-tool \
     chrome-gnome-shell \
     powertop tlp tlp-rdw
@@ -64,6 +66,11 @@ sh ./etc/ubuntu/install_apps.sh
 
 # Install nvidia-driver
 sh ./etc/ubuntu/install_nvidia_driver.sh
+
+
+# Basic settings.
+## Super + Tab work only current workspace
+gsettings set org.gnome.shell.app-switcher current-workspace-only true
 
 # Apply ubuntu and gnome settings.
 dconf load $(PWD)/backups/ubuntu-20.04/ < /

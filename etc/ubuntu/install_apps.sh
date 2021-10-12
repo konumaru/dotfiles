@@ -50,3 +50,18 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+
+# ==================================================
+# Slack
+# ==================================================
+sudo snap install slack --classic
+
+
+# ==================================================
+# Discord
+# ==================================================
+sudo apt update
+sudo apt install -y gdebi-core wget
+wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+sudo gdebi ~/discord.deb -y
