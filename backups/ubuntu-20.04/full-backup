@@ -10,7 +10,7 @@ launch-time=int64 1633626277
 release-check-time=uint32 1633626270
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='sound'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -21,6 +21,9 @@ migrated=true
 
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=false
+
+[org/gnome/desktop/a11y/keyboard]
+mousekeys-enable=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -39,7 +42,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
+picture-uri='file:///home/rui/.dotfiles/img/Wallions27696.jpg'
 primary-color='#2c001e'
 secondary-color='#2c001e'
 
@@ -47,7 +50,7 @@ secondary-color='#2c001e'
 show-weekdate=false
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
 per-window=false
 show-all-sources=false
 sources=[('ibus', 'mozc-jp'), ('xkb', 'us')]
@@ -59,13 +62,15 @@ clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=24
 document-font-name='Noto Sans CJK JP 11'
-enable-animations=false
+enable-animations=true
 enable-hot-corners=true
 font-name='Noto Sans CJK JP 11'
+gtk-enable-primary-paste=false
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Yaru'
 locate-pointer=false
+monospace-font-name='Noto Sans CJK JP 13'
 show-battery-percentage=false
 toolkit-accessibility=false
 
@@ -78,9 +83,11 @@ application-id='firefox.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+enable=true
 
 [org/gnome/desktop/notifications/application/hyper]
 application-id='hyper.desktop'
+enable=false
 
 [org/gnome/desktop/notifications/application/org-gnome-extensions]
 application-id='org.gnome.Extensions.desktop'
@@ -90,12 +97,15 @@ application-id='org.gnome.tweaks.desktop'
 
 [org/gnome/desktop/notifications/application/spotify-spotify]
 application-id='spotify_spotify.desktop'
+enable=false
 
 [org/gnome/desktop/notifications/application/thunderbird]
 application-id='thunderbird.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
+delay=uint32 380
 numlock-state=true
+repeat-interval=uint32 49
 
 [org/gnome/desktop/peripherals/mouse]
 natural-scroll=false
@@ -134,8 +144,10 @@ maximize=['<Control><Shift><Super>Up']
 unmaximize=['<Control><Shift><Super>Down', '<Alt>F5']
 
 [org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='toggle-maximize'
 action-right-click-titlebar='menu'
 button-layout=':minimize,maximize,close'
+focus-mode='click'
 titlebar-font='Noto Sans CJK JP 11'
 
 [org/gnome/evolution-data-server]
@@ -158,6 +170,24 @@ sidebar-width=200
 window-height=480
 window-width=600
 
+[org/gnome/gedit/plugins]
+active-plugins=['time', 'filebrowser', 'spell', 'modelines', 'docinfo']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/rui'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
 [org/gnome/gnome-system-monitor]
 maximized=false
 show-dependencies=false
@@ -169,7 +199,8 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/mutter]
-edge-tiling=false
+dynamic-workspaces=true
+edge-tiling=true
 overlay-key='Super_L'
 workspaces-only-on-primary=true
 
@@ -205,6 +236,7 @@ command-history=['r']
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
 enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Move_Clock@rmy.pobox.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'dash-to-panel@jderose9.github.com', 'wintile@nowsci.com', 'dash-to-dock@micxgx.gmail.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha']
 favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'discord.desktop', 'slack_slack.desktop']
+had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
@@ -263,8 +295,7 @@ enabled=false
 new-terminal-mode='tab'
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-default-size-columns=128
-default-size-rows=40
+font='Source Code Pro Semi-Bold 12'
 use-system-font=false
 
 [org/gtk/settings/file-chooser]
@@ -278,5 +309,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(1304, 579)
+window-position=(465, 994)
 window-size=(1231, 902)
