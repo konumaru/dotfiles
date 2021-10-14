@@ -10,7 +10,7 @@ launch-time=int64 1633626277
 release-check-time=uint32 1633626270
 
 [org/gnome/control-center]
-last-panel='datetime'
+last-panel='keyboard'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -18,6 +18,9 @@ prompt-check='2021-10-07T23:57:15+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -44,17 +47,19 @@ secondary-color='#2c001e'
 show-weekdate=false
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'us')]
 per-window=false
 show-all-sources=false
-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+sources=[('ibus', 'mozc-jp'), ('xkb', 'us')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
 clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
+cursor-size=24
 document-font-name='Noto Sans CJK JP 11'
+enable-animations=false
 enable-hot-corners=true
 font-name='Noto Sans CJK JP 11'
 gtk-im-module='ibus'
@@ -62,9 +67,10 @@ gtk-key-theme='Emacs'
 gtk-theme='Yaru'
 locate-pointer=false
 show-battery-percentage=false
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome']
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/firefox]
@@ -73,14 +79,27 @@ application-id='firefox.desktop'
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
 
+[org/gnome/desktop/notifications/application/hyper]
+application-id='hyper.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
+
+[org/gnome/desktop/notifications/application/spotify-spotify]
+application-id='spotify_spotify.desktop'
+
+[org/gnome/desktop/notifications/application/thunderbird]
+application-id='thunderbird.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
 
 [org/gnome/desktop/peripherals/mouse]
-speed=-0.022058823529411797
+natural-scroll=false
+speed=0.19852941176470584
 
 [org/gnome/desktop/peripherals/touchpad]
 click-method='fingers'
@@ -108,10 +127,15 @@ idle-delay=uint32 900
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
+event-sounds=true
+
+[org/gnome/desktop/wm/keybindings]
+maximize=['<Control><Shift><Super>Up']
+unmaximize=['<Control><Shift><Super>Down', '<Alt>F5']
 
 [org/gnome/desktop/wm/preferences]
 action-right-click-titlebar='menu'
-button-layout='close,minimize,maximize:'
+button-layout=':minimize,maximize,close'
 titlebar-font='Noto Sans CJK JP 11'
 
 [org/gnome/evolution-data-server]
@@ -145,11 +169,16 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/mutter]
+edge-tiling=false
 overlay-key='Super_L'
 workspaces-only-on-primary=true
 
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=['<Control><Shift><Super>Left']
+toggle-tiled-right=['<Control><Shift><Super>Right']
+
 [org/gnome/nautilus/preferences]
-default-folder-viewer='icon-view'
+default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
@@ -160,6 +189,9 @@ maximized=false
 night-light-enabled=true
 night-light-temperature=uint32 3700
 
+[org/gnome/settings-daemon/plugins/media-keys]
+terminal=['<Primary><Shift>Return']
+
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
@@ -169,11 +201,41 @@ hinting='slight'
 
 [org/gnome/shell]
 app-picker-view=uint32 0
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'desktop-icons@csoriano', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Move_Clock@rmy.pobox.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop']
+command-history=['r']
+disabled-extensions=['dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Move_Clock@rmy.pobox.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'dash-to-panel@jderose9.github.com', 'wintile@nowsci.com', 'dash-to-dock@micxgx.gmail.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'discord.desktop', 'slack_slack.desktop']
+
+[org/gnome/shell/app-switcher]
+current-workspace-only=true
+
+[org/gnome/shell/extensions/caffeine]
+user-enabled=false
 
 [org/gnome/shell/extensions/dash-to-dock]
+dash-max-icon-size=38
+dock-position='LEFT'
 preferred-monitor=0
+
+[org/gnome/shell/extensions/dash-to-panel]
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+animate-show-apps=true
+appicon-margin=9
+appicon-padding=7
+available-monitors=[0]
+hot-keys=true
+hotkeys-overlay-combo='TEMPORARILY'
+middle-click-action='LAUNCH'
+panel-anchors='{"0":"MIDDLE"}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-lengths='{"0":100}'
+panel-positions='{"0":"BOTTOM"}'
+panel-sizes='{"0":48}'
+shift-click-action='MINIMIZE'
+shift-middle-click-action='LAUNCH'
+show-apps-icon-file=''
+show-apps-icon-side-padding=8
+show-apps-override-escape=true
 
 [org/gnome/shell/extensions/desktop-icons]
 icon-size='small'
@@ -184,9 +246,15 @@ show-trash=false
 position='panel'
 show-add=true
 
+[org/gnome/shell/extensions/user-theme]
+name=''
+
+[org/gnome/shell/overrides]
+edge-tiling=false
+
 [org/gnome/software]
-check-timestamp=int64 1633954793
-online-updates-timestamp=int64 1633626439
+check-timestamp=int64 1634159000
+online-updates-timestamp=int64 1634074524
 
 [org/gnome/system/location]
 enabled=false
@@ -197,6 +265,7 @@ new-terminal-mode='tab'
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 default-size-columns=128
 default-size-rows=40
+use-system-font=false
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -209,5 +278,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(2112, 597)
+window-position=(1304, 579)
 window-size=(1231, 902)
