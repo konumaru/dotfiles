@@ -67,6 +67,9 @@ sh ./etc/ubuntu/install_apps.sh
 # Install nvidia-driver
 sh ./etc/ubuntu/install_nvidia_driver.sh
 
+# Install fonts
+sh ./etc/ubuntu/install_fonts.sh
+
 
 # Basic settings.
 ## Super + Tab work only current workspace
