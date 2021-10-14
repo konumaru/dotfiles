@@ -24,8 +24,6 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
-    imwheel \
-    i3 \
     gnome-tweak-tool \
     chrome-gnome-shell \
     powertop tlp tlp-rdw
@@ -78,6 +76,8 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 # Apply ubuntu and gnome settings.
 dconf load $(PWD)/backups/ubuntu-20.04/ < /
 
+# Set desktop backgroud image
+gsettings set org.gnome.desktop.background picture-uri file://$HOME/.dotfiles/img/Wallions27696.jpg
 
 # Restart
 sudo reboot
