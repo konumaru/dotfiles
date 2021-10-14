@@ -53,6 +53,15 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 
 # ==================================================
+# Hyper
+# ==================================================
+wget -O ~/hyper_3.0.2_amd64 https://releases.hyper.is/download/deb
+sudo gdebi ~/hyper_3.0.2_amd64
+rm ~/hyper_3.0.2_amd64
+
+
+
+# ==================================================
 # Slack
 # ==================================================
 sudo snap install slack --classic
@@ -64,4 +73,5 @@ sudo snap install slack --classic
 sudo apt update
 sudo apt install -y gdebi-core wget
 wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-sudo gdebi ~/discord.deb -y
+sudo gdebi ~/discord.deb
+rm ~/discord.deb
