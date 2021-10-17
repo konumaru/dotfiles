@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2021-10-17T14:03:06.029-00:00",
+	"CreationDate" : "2021-10-17T16:08:24.195-00:00",
 	"Sources" : 
 	[
 		{
@@ -47,6 +47,9 @@
 				},
 				{
 					"PackageIdentifier" : "vim.vim"
+				},
+				{
+					"PackageIdentifier" : "Zeit.Hyper"
 				},
 				{
 					"PackageIdentifier" : "Axosoft.GitKraken"
