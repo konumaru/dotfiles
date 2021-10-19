@@ -29,7 +29,6 @@ zinit light 'paulirish/git-open'
 zinit light 'reegnz/jq-zsh-plugin'
 zinit light 'b4b4r07/emoji-cli'
 zinit light 'mollifier/anyframe'
-zinit light 'b4b4r07/enhancd'
 zinit load 'junegunn/fzf-bin'
 zinit load 'zdharma/history-search-multi-word'
 ## Load pure theme
@@ -38,12 +37,9 @@ zinit light sindresorhus/pure
 
 # alias
 USERNAME=$(whoami)
-alias cdd='cd ${HOME}/Documents'
+alias cdd='cd /Users/${USERNAME}/Documents'
 alias ls='ls -alh'
 alias vim='nvim'
-
-# alias python="python3"
-# alias pip="pip3"
 
 ## zsh
 export HISTSIZE=1000
