@@ -24,6 +24,7 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
+    guake \
     gnome-tweak-tool \
     chrome-gnome-shell \
     powertop tlp tlp-rdw

@@ -31,6 +31,9 @@ gen-github-sshkey:
 
 dump-dconf: ## Dump ubuntu conf
 	dconf dump / > $(PWD)/backups/ubuntu-20.04/full-backup
+	guake --save-preferences $(PWD)/backups/ubuntu-20.04/my-guake-preferences
 
 load-dconf:
 	dconf load $(PWD)/backups/ubuntu-20.04/ < /
+	guake --restore-preferences $(PWD)/backups/ubuntu-20.04/my-guake-preferences
+
