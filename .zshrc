@@ -37,7 +37,7 @@ zinit light sindresorhus/pure
 
 # alias
 USERNAME=$(whoami)
-alias cdd='cd /Users/${USERNAME}/Documents'
+alias cdd='cd ${HOME}/Documents'
 alias ls='ls -alh'
 alias vim='nvim'
 alias code='code-insiders'
