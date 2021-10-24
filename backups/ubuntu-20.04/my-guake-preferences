@@ -16,6 +16,7 @@ restore-tabs-startup=true
 save-tabs-when-changed=true
 scroll-keystroke=true
 start-at-login=true
+start-fullscreen=false
 use-default-font=true
 use-login-shell=true
 use-popup=true
@@ -29,7 +30,7 @@ window-tabbar=true
 window-width=50
 
 [keybindings/global]
-show-hide='<Primary><Shift>Return'
+show-hide='<Primary><Super>Return'
 
 [keybindings/local]
 toggle-fullscreen='<Super>Return'
@@ -39,6 +40,6 @@ transparency=85
 
 [style/font]
 allow-bold=true
-palette='#000000000000:#DCDC32322F2F:#5656DBDB3A3A:#FFFF84840000:#00008484D4D4:#B7B72929D9D9:#CCCCCCCCFFFF:#FFFFFFFFFFFF:#1B1B1D1D2121:#DCDC32322F2F:#5656DBDB3A3A:#FFFF84840000:#00008484D4D4:#B7B72929D9D9:#CCCCCCCCFFFF:#FFFFFFFFFFFF:#FFFFFFFFFFFF:#000000000000'
-palette-name='Symphonic'
+palette='#1C1C1C1C1C1C:#D6D686868686:#AEAED6D68686:#D7D7AFAF8787:#8686AEAED6D6:#D6D6AEAED6D6:#8A8ADBDBB4B4:#D0D0D0D0D0D0:#1C1C1C1C1C1C:#D6D686868686:#AEAED6D68686:#E4E4C9C9AFAF:#8686AEAED6D6:#D6D6AEAED6D6:#B1B1E7E7DDDD:#EFEFEFEFEFEF:#D0D0D0D0D0D0:#262626262626'
+palette-name='Teerb'
 style='Source Code Pro 11'
