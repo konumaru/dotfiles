@@ -40,6 +40,7 @@ USERNAME=$(whoami)
 alias cdd='cd /Users/${USERNAME}/Documents'
 alias ls='ls -alh'
 alias vim='nvim'
+alias code='code-insiders'
 
 ## zsh
 export HISTSIZE=1000

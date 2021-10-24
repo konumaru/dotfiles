@@ -30,7 +30,7 @@ sudo apt -y update && sudo apt install -y 1password
 # ==================================================
 # VSCode
 # ==================================================
-sudo snap install --classic code
+sudo snap install code-insiders --classic
 
 
 # ==================================================
