@@ -53,15 +53,6 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 
 # ==================================================
-# Hyper
-# ==================================================
-wget -O ~/hyper_3.0.2_amd64 https://releases.hyper.is/download/deb
-sudo gdebi ~/hyper_3.0.2_amd64
-rm ~/hyper_3.0.2_amd64
-
-
-
-# ==================================================
 # Slack
 # ==================================================
 sudo snap install slack --classic

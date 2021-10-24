@@ -49,8 +49,6 @@ timedatectl set-local-rtc 1
 
 # Change default shell to zsh.
 chsh -s $(which zsh)
-exec $SHELL -l
-
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
