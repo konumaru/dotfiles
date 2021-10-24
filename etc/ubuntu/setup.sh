@@ -52,8 +52,8 @@ chsh -s $(which zsh)
 
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-pyenv install 3.9.7
-pyenv global 3.9.7
+/home/rui/.pyenv/bin/pyenv install 3.9.7
+/home/rui/.pyenv/bin/pyenv global 3.9.7
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
