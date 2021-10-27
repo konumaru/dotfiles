@@ -30,7 +30,7 @@ window-tabbar=true
 window-width=50
 
 [keybindings/global]
-show-hide='<Primary><Super>Return'
+show-hide='<Primary><Shift>Return'
 
 [keybindings/local]
 toggle-fullscreen='<Super>Return'

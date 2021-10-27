@@ -30,7 +30,7 @@ window-tabbar=true
 window-width=50
 
 [apps/guake/keybindings/global]
-show-hide='<Primary><Super>Return'
+show-hide='<Primary><Shift>Return'
 
 [apps/guake/keybindings/local]
 toggle-fullscreen='<Super>Return'
@@ -53,14 +53,14 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=2
-launch-time=int64 1634673023
+launch-count=3
+launch-time=int64 1635282586
 
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1634232467
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='display'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -69,11 +69,18 @@ prompt-check='2021-10-07T23:57:15+00'
 [org/gnome/deja-dup/file]
 migrated=true
 
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=false
+
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=false
 
 [org/gnome/desktop/a11y/keyboard]
 mousekeys-enable=false
+
+[org/gnome/desktop/a11y/magnifier]
+mag-factor=2.0
+mouse-tracking='proportional'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -122,11 +129,10 @@ gtk-theme='Yaru'
 locate-pointer=false
 monospace-font-name='Source Code Pro 11'
 show-battery-percentage=false
-text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code']
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/apport-gtk]
@@ -135,11 +141,17 @@ application-id='apport-gtk.desktop'
 [org/gnome/desktop/notifications/application/code-code]
 application-id='code_code.desktop'
 
+[org/gnome/desktop/notifications/application/code-insiders-code-insiders]
+application-id='code-insiders_code-insiders.desktop'
+
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
 
 [org/gnome/desktop/notifications/application/gkbd-keyboard-display]
 application-id='gkbd-keyboard-display.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
@@ -165,6 +177,9 @@ enable=false
 [org/gnome/desktop/notifications/application/thunderbird]
 application-id='thunderbird.desktop'
 
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
 [org/gnome/desktop/peripherals/keyboard]
 delay=uint32 380
 numlock-state=true
@@ -172,7 +187,7 @@ repeat-interval=uint32 49
 
 [org/gnome/desktop/peripherals/mouse]
 natural-scroll=false
-speed=0.19852941176470584
+speed=0.75735294117647056
 
 [org/gnome/desktop/peripherals/touchpad]
 click-method='fingers'
@@ -266,6 +281,7 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/mutter]
+center-new-windows=true
 dynamic-workspaces=true
 edge-tiling=false
 experimental-features=['x11-randr-fractional-scaling']
@@ -291,7 +307,7 @@ info-stats-type='discharge-accuracy'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-temperature=uint32 3464
+night-light-temperature=uint32 4182
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
@@ -305,8 +321,8 @@ hinting='slight'
 app-picker-view=uint32 1
 command-history=['killall -3 gnome-shell', 'r']
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'Move_Clock@rmy.pobox.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code-insiders_code-insiders.desktop', 'guake.desktop', 'discord.desktop', 'slack_slack.desktop']
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code-insiders_code-insiders.desktop', 'discord.desktop', 'slack_slack.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
@@ -316,8 +332,10 @@ current-workspace-only=true
 user-enabled=false
 
 [org/gnome/shell/extensions/dash-to-dock]
-dash-max-icon-size=38
+dash-max-icon-size=32
+dock-fixed=true
 dock-position='LEFT'
+height-fraction=0.80000000000000004
 preferred-monitor=0
 
 [org/gnome/shell/extensions/dash-to-panel]
@@ -361,8 +379,8 @@ name=''
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1635045179
-online-updates-timestamp=int64 1634779241
+check-timestamp=int64 1635282562
+online-updates-timestamp=int64 1635282565
 
 [org/gnome/system/location]
 enabled=false
