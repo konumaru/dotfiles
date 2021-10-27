@@ -57,6 +57,7 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+/home/rui/.poetry/bin/poetry config virtualenvs.in-project true
 
 
 # Install applications
