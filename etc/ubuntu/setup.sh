@@ -25,6 +25,7 @@ sudo apt install -y \
     tmux \
     tree \
     guake \
+    flameshot \
     gnome-tweak-tool \
     chrome-gnome-shell \
     powertop tlp tlp-rdw

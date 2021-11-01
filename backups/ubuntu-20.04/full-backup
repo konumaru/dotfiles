@@ -57,10 +57,10 @@ launch-count=3
 launch-time=int64 1635282586
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1634232467
+release-check-time=uint32 1635647298
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='default-apps'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -132,7 +132,7 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager']
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/apport-gtk]
@@ -143,6 +143,9 @@ application-id='code_code.desktop'
 
 [org/gnome/desktop/notifications/application/code-insiders-code-insiders]
 application-id='code-insiders_code-insiders.desktop'
+
+[org/gnome/desktop/notifications/application/discord]
+application-id='discord.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -225,7 +228,7 @@ unmaximize=['<Control><Shift><Super>Down', '<Alt>F5']
 action-double-click-titlebar='toggle-maximize'
 action-right-click-titlebar='menu'
 button-layout=':minimize,maximize,close'
-focus-mode='click'
+focus-mode='sloppy'
 titlebar-font='Noto Sans CJK JP 11'
 
 [org/gnome/eog/view]
@@ -283,10 +286,10 @@ col-6-width=0
 [org/gnome/mutter]
 center-new-windows=true
 dynamic-workspaces=true
-edge-tiling=false
+edge-tiling=true
 experimental-features=['x11-randr-fractional-scaling']
 overlay-key='Super_L'
-workspaces-only-on-primary=false
+workspaces-only-on-primary=true
 
 [org/gnome/mutter/keybindings]
 toggle-tiled-left=['<Control><Shift><Super>Left']
@@ -319,10 +322,10 @@ hinting='slight'
 
 [org/gnome/shell]
 app-picker-view=uint32 1
-command-history=['killall -3 gnome-shell', 'r']
+command-history=['killall -3 gnome-shell', 'r', 'code']
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
 enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'code-insiders_code-insiders.desktop', 'discord.desktop', 'slack_slack.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'notion-snap_notion-snap.desktop', 'code-insiders_code-insiders.desktop', 'discord.desktop', 'slack_slack.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
@@ -375,12 +378,16 @@ show-add=true
 [org/gnome/shell/extensions/user-theme]
 name=''
 
+[org/gnome/shell/extensions/wintile]
+delay=499
+use-minimize=false
+
 [org/gnome/shell/overrides]
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1635282562
-online-updates-timestamp=int64 1635282565
+check-timestamp=int64 1635714466
+online-updates-timestamp=int64 1635382332
 
 [org/gnome/system/location]
 enabled=false
