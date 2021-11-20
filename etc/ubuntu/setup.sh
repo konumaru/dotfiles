@@ -21,8 +21,6 @@ sudo apt install -y \
     python3-pip \
     python3-dev \
     python-is-python3 \
-    nodejs \
-    npm \
     neovim \
     tmux \
     tree \
@@ -37,6 +35,9 @@ sudo apt install -y \
     fonts-roboto \
     fonts-noto \
     fonts-ricty-diminished
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs npm
 
 apt autoremove -y
 
