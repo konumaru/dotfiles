@@ -1,0 +1,10 @@
+[Desktop Entry]
+X-SnapInstanceName=notion-snap
+Name=notion-snap
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/notion-snap_notion-snap.desktop /snap/bin/notion-snap %U
+Terminal=false
+Type=Application
+Icon=/snap/notion-snap/6/meta/gui/icon.png
+StartupWMClass=notion-snap
+Comment=A snap of Notion
+Categories=Utility;
