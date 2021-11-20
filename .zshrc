@@ -48,9 +48,7 @@ export SAVEHIST=100000
 ### ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
 setopt hist_ignore_all_dups
 ### スペースで始まるコマンド行はヒストリリストから削除
-setopt hist_ignore_space
-### 余分な空白は詰めて記録
-setopt hist_reduce_blanks
+setopt hist_ignore_space ### 余分な空白は詰めて記録 setopt hist_reduce_blanks
 ### historyコマンドは履歴に登録しない
 setopt hist_no_store
 ### 同時に起動しているzshの間でhistoryを共有する

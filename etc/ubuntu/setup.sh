@@ -21,6 +21,8 @@ sudo apt install -y \
     python3-pip \
     python3-dev \
     python-is-python3 \
+    nodejs \
+    npm \
     neovim \
     tmux \
     tree \
