@@ -30,7 +30,9 @@ sudo apt -y update && sudo apt install -y 1password
 # ==================================================
 # VSCode
 # ==================================================
-sudo snap install code-insiders --classic
+curl -L https://az764295.vo.msecnd.net/insider/bedf867b5b02c1c800fbaf4d6ce09cefbafa1592/code-insiders_1.63.0-1637213653_amd64.deb -o ~/vscode-insiders.deb
+sudo apt install ~/vscode-insiders.deb
+rm ~/vscode-insiders.deb
 
 
 # ==================================================

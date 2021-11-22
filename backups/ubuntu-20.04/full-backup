@@ -53,18 +53,18 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=3
-launch-time=int64 1635282586
+launch-count=6
+launch-time=int64 1637550982
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1635647298
+release-check-time=uint32 1636938664
 
 [org/gnome/control-center]
-last-panel='default-apps'
+last-panel='sound'
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2021-10-07T23:57:15+00'
+prompt-check='2021-11-07T15:07:18+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
@@ -132,7 +132,7 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord']
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord', 'org-gnome-dejadup', 'notion-snap-notion-snap', 'gnome-network-panel', 'code-insiders']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/apport-gtk]
@@ -144,6 +144,9 @@ application-id='code_code.desktop'
 [org/gnome/desktop/notifications/application/code-insiders-code-insiders]
 application-id='code-insiders_code-insiders.desktop'
 
+[org/gnome/desktop/notifications/application/code-insiders]
+application-id='code-insiders.desktop'
+
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
 
@@ -152,6 +155,9 @@ application-id='firefox.desktop'
 
 [org/gnome/desktop/notifications/application/gkbd-keyboard-display]
 application-id='gkbd-keyboard-display.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
@@ -166,6 +172,12 @@ application-id='guake.desktop'
 [org/gnome/desktop/notifications/application/hyper]
 application-id='hyper.desktop'
 enable=false
+
+[org/gnome/desktop/notifications/application/notion-snap-notion-snap]
+application-id='notion-snap_notion-snap.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-extensions]
 application-id='org.gnome.Extensions.desktop'
@@ -286,7 +298,7 @@ col-6-width=0
 [org/gnome/mutter]
 center-new-windows=true
 dynamic-workspaces=true
-edge-tiling=true
+edge-tiling=false
 experimental-features=['x11-randr-fractional-scaling']
 overlay-key='Super_L'
 workspaces-only-on-primary=true
@@ -324,7 +336,7 @@ hinting='slight'
 app-picker-view=uint32 1
 command-history=['killall -3 gnome-shell', 'r', 'code']
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou']
 favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'notion-snap_notion-snap.desktop', 'code-insiders_code-insiders.desktop', 'discord.desktop', 'slack_slack.desktop']
 had-bluetooth-devices-setup=true
 
@@ -386,8 +398,8 @@ use-minimize=false
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1635714466
-online-updates-timestamp=int64 1635382332
+check-timestamp=int64 1637540494
+online-updates-timestamp=int64 1637196785
 
 [org/gnome/system/location]
 enabled=false
