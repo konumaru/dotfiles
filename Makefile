@@ -36,4 +36,3 @@ dump-dconf: ## Dump ubuntu conf
 load-dconf:
 	dconf load $(PWD)/backups/ubuntu-20.04/ < /
 	guake --restore-preferences $(PWD)/backups/ubuntu-20.04/my-guake-preferences
-
