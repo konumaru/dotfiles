@@ -29,7 +29,7 @@ case ${OSTYPE} in
         echo "Running on Ubuntu"
         distri_name="ubuntu"
 
-        sudo sh ./etc/ubuntu/setup.sh
+        sudo sh ./etc/init/ubuntu/setup.sh
       fi
     else
       # Other

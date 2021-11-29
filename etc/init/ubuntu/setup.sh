@@ -65,13 +65,13 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 
 
 # Install applications
-sh ./etc/ubuntu/install_apps.sh
+sh ./etc/init/ubuntu/install_apps.sh
 
 # Install nvidia-driver
-sh ./etc/ubuntu/install_nvidia_driver.sh
+sh ./etc/init/ubuntu/install_nvidia_driver.sh
 
 # Install fonts
-sh ./etc/ubuntu/install_fonts.sh
+sh ./etc/init/ubuntu/install_fonts.sh
 
 
 # Basic settings.
@@ -86,5 +86,3 @@ gsettings set org.gnome.desktop.background picture-uri file://$HOME/.dotfiles/im
 
 # Restart
 sudo reboot
-
-
