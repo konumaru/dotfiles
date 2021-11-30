@@ -38,9 +38,8 @@ if((Test-Path $env:USERPROFILE\Documents\repositories\dotfiles) -eq "False"){
   git clone https://github.com/konumaru/dotfiles.git
 }
 
-# profile.ps1 を profile にロードさせる
-Set-Location $env:USERPROFILE\.dotfiles
-Write-Output ". $env:USERPROFILE\.dotfiles\etc\init\windows\profile.ps1" > $PROFILE.CurrentUserCurrentHost
+# profile.ps1 のシンボリックリンクを作成
+New-Item -ItemType symboliclink -Force -Value "$PROFILE" -Path "$env:USERPROFILE\.dotfiles\etc\init\windows\profile.ps1"
 
 git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
