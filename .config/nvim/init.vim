@@ -79,3 +79,5 @@ set colorcolumn=120
 "" Mappings
 "*****************************************************************************
 inoremap jj <Esc>
+map <C-l> gt
+map <C-h> gT
