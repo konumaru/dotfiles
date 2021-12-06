@@ -40,7 +40,8 @@ let g:airline#extensions#wordcount#enabled = 0
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-let g:airline_theme = 'wombat'
+" let g:airline_theme = 'wombat'
+let g:airline_theme = 'papercolor'
 '''
 
 # LSP (Language Server Protocol)
