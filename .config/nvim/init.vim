@@ -47,6 +47,7 @@ set shiftwidth=4
 set softtabstop=0
 set autoindent
 set expandtab
+set smartindent
 
 "" Map leader to ,
 let mapleader=','
@@ -81,3 +82,13 @@ set colorcolumn=120
 inoremap jj <Esc>
 map <C-l> gt
 map <C-h> gT
+
+
+"*****************************************************************************
+"" Each Filetype Settings
+"*****************************************************************************
+i
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.md setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
