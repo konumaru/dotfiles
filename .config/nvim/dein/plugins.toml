@@ -43,3 +43,11 @@ hook_add = '''
 let g:airline_theme = 'wombat'
 '''
 
+# LSP (Language Server Protocol)
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+# LSP settings
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
