@@ -51,3 +51,11 @@ repo = 'prabirshrestha/vim-lsp'
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 
+# Auto completion
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+# Auto completion for LSP
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
