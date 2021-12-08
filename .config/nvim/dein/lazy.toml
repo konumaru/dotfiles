@@ -10,5 +10,10 @@ on_cmd = 'Dein'
  let g:vim_markdown_folding_disabled = 1  " 自動折り畳みを無効
  let g:vim_markdown_toc_autofit = 1
  set conceallevel=2  " 構文の隠蔽
+
+ set tabstop=2
+ set softtabstop=2
+ set shiftwidth=2
+ set expandtab
  '''
 
