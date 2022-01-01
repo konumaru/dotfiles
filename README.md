@@ -36,7 +36,7 @@ Required operations in advance:
 Execute the following from a command prompt run with administrative privileges.
 
 ```ps1
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.ps1')
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/install.ps1')
 ```
 
 ### Register sshkey on github
