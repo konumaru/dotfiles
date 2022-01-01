@@ -48,13 +48,6 @@ git config --global user.email "konumaru1022@gmail.com"
 winget import -i ./backups/windows/winget_packages.json
 
 
-# TODO: Install WSL
-# NOTE: https://github.com/jiro4989/dotfiles
-
-# Ref:
-# https://secon.dev/entry/2020/08/17/070735/
-
-
 # Enable "User Account Control"
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "ConsentPromptBehaviorAdmin" -Value 2
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' -Name "PromptOnSecureDesktop" -Value 1

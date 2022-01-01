@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2021-11-30T06:38:46.682-00:00",
+	"CreationDate" : "2022-01-02T01:00:33.292-00:00",
 	"Sources" : 
 	[
 		{
@@ -28,9 +28,6 @@
 					"PackageIdentifier" : "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "Logitech.UnifyingSoftware"
-				},
-				{
 					"PackageIdentifier" : "GnuWin32.Make"
 				},
 				{
@@ -38,6 +35,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
@@ -52,16 +52,13 @@
 					"PackageIdentifier" : "vim.vim"
 				},
 				{
-					"PackageIdentifier" : "Zeit.Hyper"
-				},
-				{
 					"PackageIdentifier" : "Notion.Notion"
 				},
 				{
-					"PackageIdentifier" : "Axosoft.GitKraken"
+					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
-					"PackageIdentifier" : "SlackTechnologies.Slack"
+					"PackageIdentifier" : "Microsoft.PowerShell"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
@@ -76,10 +73,10 @@
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
+					"PackageIdentifier" : "Google.JapaneseIME"
 				},
 				{
-					"PackageIdentifier" : "Google.JapaneseIME"
+					"PackageIdentifier" : "Nvidia.GeForceExperience"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x86"
@@ -103,5 +100,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.1.12986"
+	"WinGetVersion" : "1.1.13405"
 }
