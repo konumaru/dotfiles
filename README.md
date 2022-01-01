@@ -33,7 +33,7 @@ Required operations in advance:
 - Change font of powershell `Consolas` to `MS ゴシック`
   - This is the operation required to display Japanese.
 
-Execute the following from a command prompt run with administrative privileges.
+Execute the following from a windows powershell run with administrative privileges.
 
 ```ps1
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/install.ps1')
