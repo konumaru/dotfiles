@@ -45,7 +45,7 @@ git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
 
 # Install apps
-winget import -i ./backups/windows/winget_packages.json
+winget import -i $env:USERPROFILE\.dotfiles\backups\windows\winget_packages.json
 
 
 # Enable "User Account Control"
