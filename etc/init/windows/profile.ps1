@@ -1,1 +1,0 @@
-C:/Users/rui/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1

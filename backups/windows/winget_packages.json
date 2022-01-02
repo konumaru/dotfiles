@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-01-02T01:53:05.831-00:00",
+	"CreationDate" : "2022-01-02T12:30:16.597-00:00",
 	"Sources" : 
 	[
 		{
@@ -14,9 +14,6 @@
 				},
 				{
 					"PackageIdentifier" : "Lexikos.AutoHotkey"
-				},
-				{
-					"PackageIdentifier" : "Canonical.Ubuntu.1804"
 				},
 				{
 					"PackageIdentifier" : "Canonical.Ubuntu.2004"
@@ -40,6 +37,9 @@
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
 				},
 				{
@@ -49,9 +49,6 @@
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
-					"PackageIdentifier" : "vim.vim"
-				},
-				{
 					"PackageIdentifier" : "Notion.Notion"
 				},
 				{
@@ -59,6 +56,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
@@ -73,16 +73,13 @@
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x86"
 				},
 				{
-					"PackageIdentifier" : "Google.JapaneseIME"
+					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x86"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x86"
-				},
-				{
-					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x64"
