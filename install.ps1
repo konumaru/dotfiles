@@ -13,10 +13,7 @@ catch [System.Management.Automation.CommandNotFoundException] {
 # Install pure to powershell (not windows powershell)
 Install-Module pure-pwsh
 Install-Module posh-git -Scope CurrentUser
-New-Item $env:USERPROFILE\OneDrive\ドキュメント\PowerShell\Microsoft.PowerShell_profile.ps1 `
-    -Value $env:USERPROFILE\.dotfiles\etc\init\windows\Microsoft.PowerShell_profile.ps1 `
-    -ItemType SymbolicLink `
-    -Force
+
 
 # Make custom directories
 # ssh
@@ -39,8 +36,11 @@ if((Test-Path $env:USERPROFILE\.dotfiles) -eq "False"){
 }
 
 
-# profile.ps1 のシンボリックリンクを作成
-New-Item -ItemType symboliclink -Force -Value "$env:USERPROFILE\OneDrive\ドキュメント\PowerShell" -Path "$env:USERPROFILE\.dotfiles\etc\init\windows\Microsoft.PowerShell_profile.ps1"
+# powershell profile のシンボリックリンクを作成
+New-Item $env:USERPROFILE\OneDrive\ドキュメント\PowerShell\Microsoft.PowerShell_profile.ps1 `
+    -Value $env:USERPROFILE\.dotfiles\etc\init\windows\Microsoft.PowerShell_profile.ps1 `
+    -ItemType SymbolicLink `
+    -Force
 
 
 # Set git global settings

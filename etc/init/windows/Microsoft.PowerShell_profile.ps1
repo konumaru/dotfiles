@@ -1,7 +1,11 @@
-# ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
-
+# Set terminal thema
 Import-Module pure-pwsh
 Import-Module posh-git
+
+# Emacs like keybind
+Import-Module PSReadLine
+Set-PSReadlineOption -EditMode Emacs
+Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteChar
 
 function Run-AsAdmin() {
     if($args.count -eq 0){
