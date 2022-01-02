@@ -2,7 +2,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 # Install winget and git
 try {
-  Get-Command -Name wingeeeeet -ErrorAction Stop
+  Get-Command -Name winget -ErrorAction Stop
 }
 catch [System.Management.Automation.CommandNotFoundException] {
   echo "Can not found winget command."
@@ -13,6 +13,7 @@ catch [System.Management.Automation.CommandNotFoundException] {
 # Install pure to powershell (not windows powershell)
 Install-Module pure-pwsh
 Install-Module posh-git -Scope CurrentUser
+Install-Module -Name PSReadLine
 
 
 # Make custom directories

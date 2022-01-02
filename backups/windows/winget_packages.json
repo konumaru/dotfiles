@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-01-02T12:30:16.597-00:00",
+	"CreationDate" : "2022-01-02T13:51:00.517-00:00",
 	"Sources" : 
 	[
 		{
@@ -35,9 +35,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
