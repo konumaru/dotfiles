@@ -53,18 +53,18 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=6
-launch-time=int64 1637550982
+launch-count=9
+launch-time=int64 1641171424
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1636938664
+release-check-time=uint32 1641171419
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='mouse'
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2021-11-07T15:07:18+00'
+prompt-check='2021-12-08T11:49:50+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
@@ -110,7 +110,7 @@ show-weekdate=false
 mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'jp')]
 per-window=false
 show-all-sources=false
-sources=[('xkb', 'jp'), ('ibus', 'mozc-jp')]
+sources=[('ibus', 'mozc-jp')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
@@ -164,7 +164,7 @@ application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
-enable=true
+enable=false
 
 [org/gnome/desktop/notifications/application/guake]
 application-id='guake.desktop'
@@ -296,7 +296,8 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/mutter]
-center-new-windows=true
+attach-modal-dialogs=true
+center-new-windows=false
 dynamic-workspaces=true
 edge-tiling=false
 experimental-features=['x11-randr-fractional-scaling']
@@ -317,7 +318,7 @@ maximized=false
 
 [org/gnome/power-manager]
 info-history-type='charge'
-info-last-device='/org/freedesktop/UPower/devices/mouse_hidpp_battery_0'
+info-last-device='/org/freedesktop/UPower/devices/mouse_dev_E9_E7_AE_6B_34_5F'
 info-stats-type='discharge-accuracy'
 
 [org/gnome/settings-daemon/plugins/color]
@@ -335,9 +336,10 @@ hinting='slight'
 [org/gnome/shell]
 app-picker-view=uint32 1
 command-history=['killall -3 gnome-shell', 'r', 'code']
+disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou']
-favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'notion-snap_notion-snap.desktop', 'code-insiders_code-insiders.desktop', 'discord.desktop', 'slack_slack.desktop']
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'custom-hot-corners-extended@G-dH.github.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'notion-snap_notion-snap.desktop', 'discord.desktop', 'code-insiders.desktop', 'slack_slack.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
@@ -345,6 +347,63 @@ current-workspace-only=true
 
 [org/gnome/shell/extensions/caffeine]
 user-enabled=false
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/misc]
+supported-active-extensions=@as []
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-0]
+action='suspend'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-1]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-2]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-3]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-4]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-5]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-0]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-1]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-2]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-3]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-4]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-5]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-0]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-1]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-2]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-3]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-4]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-5]
+action='disabled'
 
 [org/gnome/shell/extensions/dash-to-dock]
 dash-max-icon-size=32
@@ -387,6 +446,9 @@ show-trash=false
 position='panel'
 show-add=true
 
+[org/gnome/shell/extensions/net/gfxmonk/impatience]
+speed-factor=0.5
+
 [org/gnome/shell/extensions/user-theme]
 name=''
 
@@ -398,8 +460,8 @@ use-minimize=false
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1637540494
-online-updates-timestamp=int64 1637196785
+check-timestamp=int64 1641171382
+online-updates-timestamp=int64 1639441653
 
 [org/gnome/system/location]
 enabled=false
@@ -425,5 +487,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(1688, 373)
+window-position=(152, 373)
 window-size=(1231, 902)
