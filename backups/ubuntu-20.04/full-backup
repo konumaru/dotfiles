@@ -53,18 +53,27 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=9
-launch-time=int64 1641171424
+launch-count=10
+launch-time=int64 1641171696
+show-details=true
+window-height=400
+window-width=645
 
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1641171419
 
+[org/gnome/calendar]
+active-view='week'
+window-maximized=false
+window-position=(1648, 201)
+window-size=(993, 820)
+
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='region'
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2021-12-08T11:49:50+00'
+prompt-check='2022-01-07T16:00:54+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
@@ -109,7 +118,7 @@ show-weekdate=false
 [org/gnome/desktop/input-sources]
 mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'jp')]
 per-window=false
-show-all-sources=false
+show-all-sources=true
 sources=[('ibus', 'mozc-jp')]
 xkb-options=@as []
 
@@ -132,7 +141,7 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord', 'org-gnome-dejadup', 'notion-snap-notion-snap', 'gnome-network-panel', 'code-insiders']
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord', 'org-gnome-dejadup', 'notion-snap-notion-snap', 'gnome-network-panel', 'code-insiders', 'org-gnome-evolution-alarm-notify', 'slack']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/apport-gtk]
@@ -168,6 +177,7 @@ enable=false
 
 [org/gnome/desktop/notifications/application/guake]
 application-id='guake.desktop'
+enable=false
 
 [org/gnome/desktop/notifications/application/hyper]
 application-id='hyper.desktop'
@@ -179,11 +189,17 @@ application-id='notion-snap_notion-snap.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-dejadup]
 application-id='org.gnome.DejaDup.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-extensions]
 application-id='org.gnome.Extensions.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
+
+[org/gnome/desktop/notifications/application/slack]
+application-id='slack.desktop'
 
 [org/gnome/desktop/notifications/application/spotify-spotify]
 application-id='spotify_spotify.desktop'
@@ -250,6 +266,13 @@ use-background-color=true
 [org/gnome/evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
+
+[org/gnome/evolution-data-server/calendar]
+notify-window-height=114
+notify-window-width=533
+notify-window-x=48
+notify-window-y=27
+reminders-past=@as []
 
 [org/gnome/file-roller/dialogs/extract]
 recreate-folders=true
@@ -338,15 +361,16 @@ app-picker-view=uint32 1
 command-history=['killall -3 gnome-shell', 'r', 'code']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'workspace-grid@mathematical.coffee.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'desktop-icons@csoriano', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'dash-to-panel@jderose9.github.com', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'custom-hot-corners-extended@G-dH.github.com']
-favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'spotify_spotify.desktop', 'notion-snap_notion-snap.desktop', 'discord.desktop', 'code-insiders.desktop', 'slack_slack.desktop']
+enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-grid@mathematical.coffee.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'custom-hot-corners-extended@G-dH.github.com', 'caffeine@patapon.info', 'desktop-icons@csoriano']
+favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'notion-snap_notion-snap.desktop', 'spotify_spotify.desktop', 'discord.desktop', 'slack.desktop', 'code-insiders.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
 
 [org/gnome/shell/extensions/caffeine]
-user-enabled=false
+restore-state=false
+user-enabled=true
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/misc]
 supported-active-extensions=@as []
@@ -406,11 +430,28 @@ action='disabled'
 action='disabled'
 
 [org/gnome/shell/extensions/dash-to-dock]
-dash-max-icon-size=32
+apply-custom-theme=false
+custom-background-color=false
+custom-theme-shrink=true
+dash-max-icon-size=24
 dock-fixed=true
 dock-position='LEFT'
+extend-height=true
+force-straight-corner=false
 height-fraction=0.80000000000000004
+hot-keys=true
+icon-size-fixed=false
+isolate-monitors=false
+isolate-workspaces=true
+multi-monitor=false
 preferred-monitor=0
+running-indicator-style='DOTS'
+scroll-action='switch-workspace'
+show-favorites=true
+show-mounts=true
+show-running=true
+show-show-apps-button=true
+show-trash=false
 
 [org/gnome/shell/extensions/dash-to-panel]
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
@@ -460,7 +501,7 @@ use-minimize=false
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1641171382
+check-timestamp=int64 1641606700
 online-updates-timestamp=int64 1639441653
 
 [org/gnome/system/location]
@@ -474,7 +515,7 @@ font='Source Code Pro Semi-Bold 12'
 use-system-font=false
 
 [org/gtk/settings/color-chooser]
-selected-color=(true, 0.0, 0.0, 0.0, 1.0)
+selected-color=(true, 0.45098039215686275, 0.82352941176470584, 0.086274509803921567, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -482,10 +523,13 @@ location-mode='path-bar'
 show-hidden=true
 show-size-column=true
 show-type-column=true
-sidebar-width=172
+sidebar-width=189
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(152, 373)
+window-position=(1680, 356)
 window-size=(1231, 902)
+
+[system/locale]
+region='en_US.UTF-8'
