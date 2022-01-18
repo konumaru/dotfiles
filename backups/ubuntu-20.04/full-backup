@@ -53,14 +53,23 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=10
-launch-time=int64 1641171696
+launch-count=12
+launch-time=int64 1642421091
 show-details=true
 window-height=400
 window-width=645
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1641171419
+release-check-time=uint32 1642421082
+
+[org/gnome/Sudoku]
+window-height=630
+window-is-maximized=false
+window-width=730
+
+[org/gnome/baobab/ui]
+window-size=(960, 600)
+window-state=87168
 
 [org/gnome/calendar]
 active-view='week'
@@ -69,7 +78,7 @@ window-position=(1648, 201)
 window-size=(993, 820)
 
 [org/gnome/control-center]
-last-panel='region'
+last-panel='applications'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -128,7 +137,7 @@ clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=24
 document-font-name='Noto Sans CJK JP 11'
-enable-animations=true
+enable-animations=false
 enable-hot-corners=true
 font-name='Noto Sans CJK JP 11'
 gtk-enable-primary-paste=false
@@ -141,8 +150,11 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord', 'org-gnome-dejadup', 'notion-snap-notion-snap', 'gnome-network-panel', 'code-insiders', 'org-gnome-evolution-alarm-notify', 'slack']
-show-banners=true
+application-children=['firefox', 'org-gnome-tweaks', 'google-chrome', 'spotify-spotify', 'thunderbird', 'org-gnome-extensions', 'hyper', 'apport-gtk', 'guake', 'gkbd-keyboard-display', 'code-code', 'code-insiders-code-insiders', 'gnome-power-panel', 'update-manager', 'discord', 'org-gnome-dejadup', 'notion-snap-notion-snap', 'gnome-network-panel', 'code-insiders', 'org-gnome-evolution-alarm-notify', 'slack', 'gnome-control-center', '1password']
+show-banners=false
+
+[org/gnome/desktop/notifications/application/1password]
+application-id='1password.desktop'
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -165,6 +177,12 @@ application-id='firefox.desktop'
 [org/gnome/desktop/notifications/application/gkbd-keyboard-display]
 application-id='gkbd-keyboard-display.desktop'
 
+[org/gnome/desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-datetime-panel]
+enable=false
+
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
@@ -186,11 +204,15 @@ enable=false
 [org/gnome/desktop/notifications/application/notion-snap-notion-snap]
 application-id='notion-snap_notion-snap.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-calculator]
+enable=false
+
 [org/gnome/desktop/notifications/application/org-gnome-dejadup]
 application-id='org.gnome.DejaDup.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
+enable=false
 
 [org/gnome/desktop/notifications/application/org-gnome-extensions]
 application-id='org.gnome.Extensions.desktop'
@@ -213,7 +235,7 @@ application-id='update-manager.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 delay=uint32 380
-numlock-state=true
+numlock-state=false
 repeat-interval=uint32 49
 
 [org/gnome/desktop/peripherals/mouse]
@@ -239,10 +261,11 @@ secondary-color='#2c001e'
 ubuntu-lock-on-suspend=false
 
 [org/gnome/desktop/search-providers]
+disabled=['org.gnome.seahorse.Application.desktop', 'org.gnome.Calendar.desktop']
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 900
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -250,13 +273,15 @@ event-sounds=true
 
 [org/gnome/desktop/wm/keybindings]
 maximize=['<Control><Shift><Super>Up']
+panel-main-menu=['<Alt>F1']
 unmaximize=['<Control><Shift><Super>Down', '<Alt>F5']
 
 [org/gnome/desktop/wm/preferences]
 action-double-click-titlebar='toggle-maximize'
 action-right-click-titlebar='menu'
 button-layout=':minimize,maximize,close'
-focus-mode='sloppy'
+focus-mode='click'
+resize-with-right-button=false
 titlebar-font='Noto Sans CJK JP 11'
 
 [org/gnome/eog/view]
@@ -268,10 +293,10 @@ migrated=true
 network-monitor-gio-name=''
 
 [org/gnome/evolution-data-server/calendar]
-notify-window-height=114
-notify-window-width=533
-notify-window-x=48
-notify-window-y=27
+notify-window-height=602
+notify-window-width=1096
+notify-window-x=1858
+notify-window-y=1030
 reminders-past=@as []
 
 [org/gnome/file-roller/dialogs/extract]
@@ -296,7 +321,7 @@ active-plugins=['time', 'filebrowser', 'spell', 'modelines', 'docinfo']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/rui/.cache/.fr-kknEmp/BespokeSynth'
+virtual-root='file:///home/rui/Downloads'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -348,7 +373,16 @@ info-stats-type='discharge-accuracy'
 night-light-enabled=true
 night-light-temperature=uint32 4182
 
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Primary><Super>3'
+command='gnome-screenshot'
+name='Screenshot'
+
 [org/gnome/settings-daemon/plugins/power]
+power-button-action='nothing'
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 
@@ -361,22 +395,31 @@ app-picker-view=uint32 1
 command-history=['killall -3 gnome-shell', 'r', 'code']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com']
-enabled-extensions=['extensions@abteil.org', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'workspace-grid@mathematical.coffee.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'audio-switcher@AndresCidoncha', 'Move_Clock@rmy.pobox.com', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'custom-hot-corners-extended@G-dH.github.com', 'caffeine@patapon.info', 'desktop-icons@csoriano']
+enabled-extensions=['extensions@abteil.org', 'workspace-grid@mathematical.coffee.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'impatience@gfxmonk.net', 'wintile@nowsci.com', 'output-audio-devices@muflone', 'panel-osd@berend.de.schouwer.gmail.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'gTile@vibou', 'custom-hot-corners-extended@G-dH.github.com', 'caffeine@patapon.info', 'desktop-icons@csoriano', 'ubuntu-appindicators@ubuntu.com', 'ubuntu-dock@ubuntu.com', 'dash-to-panel@jderose9.github.com', 'dash-to-dock@micxgx.gmail.com', 'system-monitor@paradoxxx.zero.gmail.com', 'audio-switcher@AndresCidoncha', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'custom-hot-corners@janrunx.gmail.com', 'Move_Clock@rmy.pobox.com']
 favorite-apps=['org.gnome.Nautilus.desktop', 'thunderbird.desktop', 'google-chrome.desktop', 'notion-snap_notion-snap.desktop', 'spotify_spotify.desktop', 'discord.desktop', 'slack.desktop', 'code-insiders.desktop']
 had-bluetooth-devices-setup=true
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=true
 
+[org/gnome/shell/extensions/arcmenu]
+arc-menu-placement='Panel'
+available-placement=[true, false, false]
+prefs-visible-page=0
+
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['discord.desktop:1', 'code-insiders.desktop:2', 'slack.desktop:1', 'spotify_spotify.desktop:1', 'google-chrome.desktop:2']
+
 [org/gnome/shell/extensions/caffeine]
 restore-state=false
-user-enabled=true
+show-notifications=false
+user-enabled=false
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/misc]
 supported-active-extensions=@as []
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-0]
-action='suspend'
+action='disabled'
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-1]
 action='disabled'
@@ -391,6 +434,24 @@ action='disabled'
 action='disabled'
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-left-5]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-0]
+action='suspend'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-1]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-2]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-3]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-4]
+action='disabled'
+
+[org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-bottom-right-5]
 action='disabled'
 
 [org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-left-0]
@@ -429,6 +490,12 @@ action='disabled'
 [org/gnome/shell/extensions/custom-hot-corners-extended/monitor-0-top-right-5]
 action='disabled'
 
+[org/gnome/shell/extensions/custom-hot-corners/monitor-0-bottom-right]
+action='runCommand'
+click=false
+command='systemctl suspend'
+fullscreen=false
+
 [org/gnome/shell/extensions/dash-to-dock]
 apply-custom-theme=false
 custom-background-color=false
@@ -454,28 +521,41 @@ show-show-apps-button=true
 show-trash=false
 
 [org/gnome/shell/extensions/dash-to-panel]
+animate-app-switch=true
+animate-appicon-hover=false
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
 animate-show-apps=true
-appicon-margin=8
-appicon-padding=4
+animate-window-launch=true
+appicon-margin=0
+appicon-padding=12
 available-monitors=[0]
-dot-style-focused='METRO'
-dot-style-unfocused='METRO'
+dot-style-focused='DASHES'
+dot-style-unfocused='DOTS'
+group-apps=true
 hot-keys=true
 hotkeys-overlay-combo='TEMPORARILY'
 intellihide=false
+isolate-monitors=false
+isolate-workspaces=false
 leftbox-size=0
 middle-click-action='LAUNCH'
 panel-anchors='{"0":"MIDDLE"}'
-panel-element-positions='{"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":false,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
 panel-lengths='{"0":100}'
 panel-positions='{"0":"BOTTOM"}'
-panel-sizes='{"0":32}'
+panel-sizes='{"0":48}'
 shift-click-action='MINIMIZE'
 shift-middle-click-action='LAUNCH'
+show-appmenu=false
 show-apps-icon-file=''
 show-apps-icon-side-padding=8
 show-apps-override-escape=true
+show-favorites-all-monitors=true
+show-running-apps=true
+show-tooltip=true
+show-window-previews=true
+stockgs-keep-dash=false
+tray-padding=-1
 tray-size=0
 
 [org/gnome/shell/extensions/desktop-icons]
@@ -501,7 +581,7 @@ use-minimize=false
 edge-tiling=false
 
 [org/gnome/software]
-check-timestamp=int64 1641606700
+check-timestamp=int64 1641848822
 online-updates-timestamp=int64 1639441653
 
 [org/gnome/system/location]
@@ -528,7 +608,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(1680, 356)
+window-position=(188, 403)
 window-size=(1231, 902)
 
 [system/locale]
