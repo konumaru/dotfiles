@@ -29,6 +29,7 @@ zinit light 'paulirish/git-open'
 zinit light 'reegnz/jq-zsh-plugin'
 zinit light 'b4b4r07/emoji-cli'
 zinit light 'mollifier/anyframe'
+zinit light 'reegnz/jq-zsh-plugin'
 zinit load 'junegunn/fzf-bin'
 zinit load 'zdharma/history-search-multi-word'
 ## Load pure theme
@@ -73,3 +74,19 @@ zle -N history-beginning-search-forward-end history-search-end
 
 ## Python
 eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/rui/.pyenv/versions/anaconda3-2021.05/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/rui/.pyenv/versions/anaconda3-2021.05/etc/profile.d/conda.sh" ]; then
+        . "/home/rui/.pyenv/versions/anaconda3-2021.05/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/rui/.pyenv/versions/anaconda3-2021.05/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
