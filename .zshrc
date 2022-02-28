@@ -77,14 +77,14 @@ eval "$(pyenv init -)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/rui/.pyenv/versions/anaconda3-2021.05/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/rui/.pyenv/versions/anaconda3-2020.11/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/rui/.pyenv/versions/anaconda3-2021.05/etc/profile.d/conda.sh" ]; then
-        . "/home/rui/.pyenv/versions/anaconda3-2021.05/etc/profile.d/conda.sh"
+    if [ -f "/home/rui/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh" ]; then
+        . "/home/rui/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh"
     else
-        export PATH="/home/rui/.pyenv/versions/anaconda3-2021.05/bin:$PATH"
+        export PATH="/home/rui/.pyenv/versions/anaconda3-2020.11/bin:$PATH"
     fi
 fi
 unset __conda_setup

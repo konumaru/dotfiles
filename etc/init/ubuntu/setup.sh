@@ -26,6 +26,7 @@ sudo apt install -y \
     tree \
     guake \
     flameshot \
+    nvidia-cuda-toolkit \
     gnome-tweak-tool \
     chrome-gnome-shell \
     powertop tlp tlp-rdw
