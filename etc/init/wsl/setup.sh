@@ -13,6 +13,10 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
+    docker-ce \
+    docker-ce-cli \
+    containerd.io
+
 
 # Essential for pyenv
 sudo apt install -y \
@@ -52,8 +56,8 @@ git config --global user.email "konumaru1022@gmail.com"
 
 # Install pyenv
 curl https://pyenv.run | bash
-pyenv install 3.9.7
-pyenv global 3.9.7
+/home/${USERNAME}/.pyenv/bin/pyenv install 3.9.7
+/home/${USERNAME}/.pyenv/bin/pyenv global 3.9.7
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
