@@ -1,5 +1,4 @@
 #!/bin/bash
-
 DOTPATH=~/.dotfiles
 GITHUB_URL=https://github.com/konumaru/dotfiles
 
@@ -22,7 +21,10 @@ case ${OSTYPE} in
     #TODO: run install script of macos.
     ;;
   linux*)
-    if [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
+    if [[ "$(uname -r)" == *WSL* ]]; then
+      echo "Running on WSL"
+      sudo sh ./etc/init/wsl/setup.sh
+    elif [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
       # Check Ubuntu or Debian
       if [ -e /etc/lsb-release ]; then
         # Ubuntu
