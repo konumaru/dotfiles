@@ -13,9 +13,7 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
-    docker-ce \
-    docker-ce-cli \
-    containerd.io
+    docker.io 
 
 
 # Essential for pyenv
