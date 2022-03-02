@@ -38,7 +38,7 @@ if((Test-Path $env:USERPROFILE\.dotfiles) -eq "False"){
 
 
 # powershell profile のシンボリックリンクを作成
-New-Item $env:USERPROFILE\OneDrive\ドキュメント\PowerShell\Microsoft.PowerShell_profile.ps1 `
+New-Item $Profile.AllUsersCurrentHost
     -Value $env:USERPROFILE\.dotfiles\etc\init\windows\Microsoft.PowerShell_profile.ps1 `
     -ItemType SymbolicLink `
     -Force
