@@ -60,3 +60,7 @@ curl https://pyenv.run | bash
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 /home/${USERNAME}/.poetry/bin/poetry config virtualenvs.in-project true
+
+# Set wsl config
+windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
+cp ${HOME}/.dotfiles/.wslconfig ${windowsUserProfile}
