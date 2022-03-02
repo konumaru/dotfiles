@@ -1,20 +1,27 @@
 autoload -Uz promptinit compinit;
 promptinit;
 compinit;
+
 ### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+if [[ ! -e $HOME/.local/share/zinit/zinit.git ]]; then
+    echo "install zinit"
+    sh -c "$(curl -fsSL https://git.io/zinit-install)"
 fi
 
-source "$HOME/.zinit/bin/zinit.zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+### End of Zinit's installer chunk
 
 # Zinit plugins
 zinit snippet 'OMZ::plugins/git/git.plugin.zsh'
@@ -31,7 +38,6 @@ zinit light 'b4b4r07/emoji-cli'
 zinit light 'mollifier/anyframe'
 zinit light 'reegnz/jq-zsh-plugin'
 zinit load 'junegunn/fzf-bin'
-zinit load 'zdharma/history-search-multi-word'
 ## Load pure theme
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
@@ -74,19 +80,3 @@ zle -N history-beginning-search-forward-end history-search-end
 
 ## Python
 eval "$(pyenv init -)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/rui/.pyenv/versions/anaconda3-2020.11/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/rui/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh" ]; then
-        . "/home/rui/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/rui/.pyenv/versions/anaconda3-2020.11/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
