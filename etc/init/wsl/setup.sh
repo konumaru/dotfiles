@@ -64,3 +64,8 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 # Set wsl config
 windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
 cp ${HOME}/.dotfiles/.wslconfig ${windowsUserProfile}
+
+
+# Install node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install --lts
