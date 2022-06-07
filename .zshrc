@@ -68,6 +68,8 @@ setopt no_beep
 setopt auto_param_slash
 ### 語の途中でもカーソル位置で補完
 setopt complete_in_word
+### history の共有
+setopt share_history
 ### 部分補完をしてくれるやつ
 setopt list_types
 setopt auto_list
@@ -88,3 +90,20 @@ export NVM_DIR="$HOME/.config/nvm"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+
+# homebrew
+case ${OSTYPE} in
+  darwin*)
+    ARCH=$(uname -m)
+    if [[ $ARCH == arm64 ]]; then
+        eval $(/opt/homebrew/bin/brew shellenv)
+    elif [[ $ARCH == x86_64 ]]; then
+        eval $(/usr/local/bin/brew shellenv)
+    fi
+    ;;
+  linux*)
+    test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+    test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
+    ;;
+esac
