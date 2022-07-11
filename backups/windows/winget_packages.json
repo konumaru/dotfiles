@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-01-02T13:51:00.517-00:00",
+	"CreationDate" : "2022-07-12T01:18:43.226-00:00",
 	"Sources" : 
 	[
 		{
@@ -22,7 +22,16 @@
 					"PackageIdentifier" : "Discord.Discord"
 				},
 				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
 					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "Logitech.LogiBolt"
+				},
+				{
+					"PackageIdentifier" : "Logitech.Options"
 				},
 				{
 					"PackageIdentifier" : "GnuWin32.Make"
@@ -35,6 +44,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "Mozilla.Thunderbird"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
@@ -52,12 +64,6 @@
 					"PackageIdentifier" : "SlackTechnologies.Slack"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "Google.Chrome"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
 				},
 				{
@@ -70,7 +76,19 @@
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x86"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VC++2008Redist-x64"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VC++2013Redist-x86"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome"
 				},
 				{
 					"PackageIdentifier" : "Nvidia.GeForceExperience"
@@ -80,9 +98,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VC++2012Redist-x64"
-				},
-				{
-					"PackageIdentifier" : "appget.appget"
 				}
 			],
 			"SourceDetails" : 
@@ -94,5 +109,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.1.13405"
+	"WinGetVersion" : "1.2.11601"
 }
