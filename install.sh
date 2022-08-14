@@ -19,6 +19,7 @@ case ${OSTYPE} in
   darwin*)
     echo "Running on MacOS"
     #TODO: run install script of macos.
+    sudo sh ./etc/init/macos/setup.sh
     ;;
   linux*)
     if [[ "$(uname -r)" == *WSL* ]]; then

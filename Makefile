@@ -27,7 +27,7 @@ backup:
 
 
 gen-github-sshkey:
-	./etc/set_github_ssh_key.sh
+	sh ./etc/set_github_ssh_key.sh
 
 dump-dconf: ## Dump ubuntu conf
 	dconf dump / > $(PWD)/backups/ubuntu-20.04/full-backup

@@ -88,8 +88,10 @@ export NVM_DIR="$HOME/.config/nvm"
 
 # pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-
 
 # homebrew
 case ${OSTYPE} in
@@ -107,5 +109,12 @@ case ${OSTYPE} in
     test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
     ;;
 esac
+<<<<<<< HEAD
 
+=======
+### End of Zinit's installer chunk
+
+
+# direnv
+>>>>>>> 213cd33a2dde363b6b3adfdd51bccc4710096a43
 eval "$(direnv hook zsh)"
