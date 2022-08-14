@@ -109,12 +109,6 @@ case ${OSTYPE} in
     test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
     ;;
 esac
-<<<<<<< HEAD
-
-=======
-### End of Zinit's installer chunk
-
 
 # direnv
->>>>>>> 213cd33a2dde363b6b3adfdd51bccc4710096a43
 eval "$(direnv hook zsh)"
