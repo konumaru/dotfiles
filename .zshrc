@@ -107,3 +107,5 @@ case ${OSTYPE} in
     test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
     ;;
 esac
+
+eval "$(direnv hook zsh)"
