@@ -16,3 +16,4 @@ function Run-AsAdmin() {
 }
 
 Set-Alias -Name:"sudo" -Value:"Run-AsAdmin" -Description:"Start the certain process as administrator" -Option:"None"
+
