@@ -42,10 +42,15 @@ zinit load 'junegunn/fzf-bin'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-# alias
 USERNAME=$(whoami)
+
+# Env variables
+export PATH="/Users/${USERNAME}/.local/bin:$PATH"
+
+# alias
 alias cdd='cd ${HOME}/Documents'
 alias cdf='cd ${HOME}/Documents/works/family_tech'
+alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
 alias vim='nvim'
 alias code='code-insiders'
@@ -99,9 +104,7 @@ case ${OSTYPE} in
   darwin*)
     ARCH=$(uname -m)
     if [[ $ARCH == arm64 ]]; then
-        eval $(/opt/homebrew/bin/brew shellenv)
-    elif [[ $ARCH == x86_64 ]]; then
-        eval $(/usr/local/bin/brew shellenv)
+        eval $(/opt/homebrew/bin/brew shellenv) elif [[ $ARCH == x86_64 ]]; then eval $(/usr/local/bin/brew shellenv)
     fi
     ;;
   linux*)

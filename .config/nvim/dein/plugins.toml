@@ -32,6 +32,7 @@ map <C-h> gT
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
 set laststatus=2
 let g:airline#extensions#branch#enabled = 1
@@ -40,13 +41,6 @@ let g:airline#extensions#wordcount#enabled = 0
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline_powerline_fonts = 1
-'''
-
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-let g:airline_theme = 'dark theme with powerline symbols'
 '''
 
 
