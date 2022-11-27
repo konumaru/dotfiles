@@ -34,6 +34,7 @@ sudo apt install -y \
     libxmlsec1-dev \
     libffi-dev \
     liblzma-dev \
+    direnv \
     python3 \
     python3-pip \
     python-is-python3
@@ -53,17 +54,13 @@ git config --global user.name "konumaru"
 git config --global user.email "konumaru1022@gmail.com"
 
 # Install pyenv
-curl https://pyenv.run | bash
-/home/${USERNAME}/.pyenv/bin/pyenv install 3.9.7
-/home/${USERNAME}/.pyenv/bin/pyenv global 3.9.7
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+/home/${USERNAME}/.pyenv/bin/pyenv install 3.10.8
+/home/${USERNAME}/.pyenv/bin/pyenv global 3.10.8
 
 # Install poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 /home/${USERNAME}/.poetry/bin/poetry config virtualenvs.in-project true
-
-# Set wsl config
-windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
-cp ${HOME}/.dotfiles/.wslconfig ${windowsUserProfile}
 
 
 # Install node
@@ -71,5 +68,18 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
 
 
+# Install direnv
+curl -sfL https://direnv.net/install.sh | bash
+
+
 # Install linuxbrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+# Make dir for nvim
+sudo make ${HOME}/.config
+sudo make ${HOME}/.config/nvim
+
+# Set wsl config
+windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
+cp ${HOME}/.dotfiles/.wslconfig ${windowsUserProfile}

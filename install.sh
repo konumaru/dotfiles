@@ -24,6 +24,7 @@ case ${OSTYPE} in
   linux*)
     if [[ "$(uname -r)" == *WSL* ]]; then
       echo "Running on WSL"
+      sudo apt install make
       sudo sh ./etc/init/wsl/setup.sh
     elif [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
       # Check Ubuntu or Debian
