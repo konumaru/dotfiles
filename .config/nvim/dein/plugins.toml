@@ -145,6 +145,5 @@ repo ='machakann/vim-highlightedyank'
 repo = 'godlygeek/tabular'
 repo = 'preservim/vim-markdown'
 hook_add = '''
-let g:vim_markdown_toc_autofit = 1
 '''
 
