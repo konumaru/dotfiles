@@ -114,6 +114,13 @@ hook_add = '''
   \}
 '''
 
+# Auto save
+[[plugins]]
+repo = 'vim-scripts/vim-auto-save'
+hook_add = '''
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+'''
 
 # Auto completion
 [[plugins]]
@@ -141,9 +148,13 @@ repo = 'jiangmiao/auto-pairs'
 repo ='machakann/vim-highlightedyank'
 
 
+# -----
+# Markdown
+# -----
+
 [[plugins]]
 repo = 'godlygeek/tabular'
 repo = 'preservim/vim-markdown'
 hook_add = '''
+let g:vim_markdown_folding_disabled = 1
 '''
-
