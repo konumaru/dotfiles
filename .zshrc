@@ -1,7 +1,3 @@
-autoload -Uz promptinit compinit;
-promptinit;
-compinit;
-
 ### Added by Zinit's installer
 if [[ ! -e $HOME/.local/share/zinit/zinit.git ]]; then
     echo "install zinit"
@@ -42,12 +38,16 @@ zinit load 'junegunn/fzf-bin'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
+## Zstyle
+autoload -U promptinit; promptinit
+
 USERNAME=$(whoami)
 
 # Env variables
 export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 
 # alias
+alias reload='source ~/.zshrc'
 alias cdd='cd ${HOME}/Documents'
 alias cdf='cd ${HOME}/Documents/works/family_tech'
 alias cdn='cd ${HOME}/Documents/works/note'
@@ -126,3 +126,4 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
+
