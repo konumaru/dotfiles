@@ -13,4 +13,5 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
 ## Neovim
-export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
+
