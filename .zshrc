@@ -86,18 +86,33 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
-# nodejs, npm with nvm
+
+# Environment variables
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH=/Library/TeX/texbin:$PATH
+
+## nodejs, npm with nvm
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ### End of Zinit's installer chunk
 
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
+## pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
-# homebrew
+## poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
+## kaggle
+export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
+
+# neovim
+export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
+
+## homebrew
 case ${OSTYPE} in
   darwin*)
     ARCH=$(uname -m)
@@ -114,7 +129,7 @@ case ${OSTYPE} in
     ;;
 esac
 
-# direnv
+## direnv
 eval "$(direnv hook zsh)"
 
 # Load a few important annexes, without Turbo
