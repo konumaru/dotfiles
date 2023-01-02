@@ -3,16 +3,6 @@ repo = 'cespare/vim-toml'
 
 
 [[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-on_i = 1
-merged = '0'
-hook_source = '''
-call coil398#init#coc#hook_source()
-'''
-
-
-[[plugins]]
 repo='scrooloose/nerdtree'
 hook_add = '''
 let g:NERDTreeChDirMode=2
@@ -44,76 +34,6 @@ let g:airline_powerline_fonts = 1
 '''
 
 
-# LSP (Language Server Protocol)
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-
-# LSP settings
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-hook_add = '''
-  let g:lsp_settings = {
-  \  'pylsp-all': {
-  \    'workspace_config': {
-  \      'pylsp': {
-  \        'configurationSources': ['flake8'],
-  \        'plugins': {
-  \          'flake8': {
-  \            'enabled': 1
-  \          },
-  \          'mccabe': {
-  \            'enabled': 0
-  \          },
-  \          'pycodestyle': {
-  \            'enabled': 0
-  \          },
-  \          'pyflakes': {
-  \            'enabled': 0
-  \          },
-  \          'pylsp_mypy': {
-  \            'enabled': 1
-  \          },
-  \         'isort': {
-  \             'enabled': 1
-  \          },
-  \        }
-  \      }
-  \    }
-  \  }
-  \}
-
-  autocmd BufWritePre <buffer> LspDocumentFormatSync
-'''
-
-
-# LSP-lightline bridge
-[[plugins]]
-repo = 'halkn/lightline-lsp'
-
-
-# Customize status line
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-  let g:lightline = {
-  \  'mode_map': {'c': 'NORMAL'},
-  \  'active': {
-  \    'right': [
-  \      [ 'lsp_errors', 'lsp_warnings' ],
-  \    ]
-  \  },
-  \  'component_expand': {
-  \    'lsp_warnings': 'lightline_lsp#warnings',
-  \    'lsp_errors':   'lightline_lsp#errors',
-  \  },
-  \  'component_type': {
-  \    'lsp_warnings': 'warning',
-  \    'lsp_errors':   'errors',
-  \  },
-  \}
-'''
-
 # Auto save
 [[plugins]]
 repo = 'vim-scripts/vim-auto-save'
@@ -122,36 +42,13 @@ let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 '''
 
-# Auto completion
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-
-
-# Auto completion for LSP
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
-
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-
-[[plugins]]
-repo = 'w0rp/ale'
-
-
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
-
-
-[[plugins]]
-repo ='machakann/vim-highlightedyank'
 
 
 # -----
 # Markdown
 # -----
-
 [[plugins]]
 repo = 'godlygeek/tabular'
 repo = 'preservim/vim-markdown'
