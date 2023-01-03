@@ -2,7 +2,6 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/konumaru/dotfiles?style=social)
 ![GitHub](https://img.shields.io/github/license/konumaru/dotfiles?style=flat-square)
-[![Monthly Backup](https://github.com/konumaru/dotfiles/actions/workflows/monthly-backup.yml/badge.svg?event=workflow_dispatch)](https://github.com/konumaru/dotfiles/actions/workflows/monthly-backup.yml)
 
 ## Install required tools
 
