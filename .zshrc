@@ -53,7 +53,6 @@ alias cdf='cd ${HOME}/Documents/works/family_tech'
 alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
 alias vim='nvim'
-alias code='code-insiders'
 
 ## zsh
 export HISTSIZE=1000
