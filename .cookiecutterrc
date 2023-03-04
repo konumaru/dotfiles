@@ -1,0 +1,4 @@
+default_context:
+    email: "konumaru1022@gmail.com"
+    github_username: "konumaru"
+cookiecutters_dir: "~/.cookiecutters/"
