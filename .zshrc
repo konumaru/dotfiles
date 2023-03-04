@@ -43,6 +43,8 @@ zstyle :prompt:pure:path color '#6495ed'
 
 ## Zstyle
 autoload -U promptinit; promptinit
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 USERNAME=$(whoami)
 
@@ -56,6 +58,7 @@ alias cdf='cd ${HOME}/Documents/works/family_tech'
 alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
 alias vim='nvim'
+alias python='/usr/local/bin/python3'
 
 ## zsh
 export HISTSIZE=1000
