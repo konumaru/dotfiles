@@ -38,6 +38,9 @@ zinit load 'junegunn/fzf-bin'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
+zmodload zsh/nearcolor
+zstyle :prompt:pure:path color '#6495ed'
+
 ## Zstyle
 autoload -U promptinit; promptinit
 
