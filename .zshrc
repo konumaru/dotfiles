@@ -54,11 +54,11 @@ export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 # alias
 alias reload='source ~/.zshrc'
 alias cdd='cd ${HOME}/Documents'
-alias cdf='cd ${HOME}/Documents/works/family_tech'
 alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
 alias vim='nvim'
 alias python='/usr/local/bin/python3'
+alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 
 ## zsh
 export HISTSIZE=1000
