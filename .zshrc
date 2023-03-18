@@ -57,7 +57,6 @@ alias cdd='cd ${HOME}/Documents'
 alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
 alias vim='nvim'
-alias python='/usr/local/bin/python3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 
 ## zsh
@@ -109,7 +108,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 ## poetry
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 ## kaggle
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
