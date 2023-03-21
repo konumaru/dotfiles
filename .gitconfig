@@ -1,0 +1,17 @@
+[user]
+    name = konumaru
+    email = konumaru1022@gmail.com
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[alias]
+    ss = status -s
+    co = checkout
+    br = branch
+    adu = add -u
+    adup = add -u -p
+    c = commit -m
+    firstcom = commit --allow-empty -m \"Inital commit\"
