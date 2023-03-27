@@ -11,8 +11,7 @@
     ss = status -s
     co = checkout
     br = branch
-    adu = add -u
-    adup = add -u -p
+    a = add -u
     c = commit -m
     pm = push origin main
     firstcom = commit --allow-empty -m \"Inital commit\"
