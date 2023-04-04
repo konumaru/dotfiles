@@ -16,13 +16,13 @@
 ### Mac
 
 ```sh
-bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
+bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
 ```
 
 ### Ubuntu
 
 ```sh
-bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
+bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
 ```
 
 ### Windows
@@ -35,7 +35,7 @@ Required operations in advance:
 Execute the following from a windows powershell run with administrative privileges.
 
 ```ps1
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/install.ps1')
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.ps1')
 ```
 
 ### Register sshkey on github
