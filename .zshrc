@@ -8,18 +8,13 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
+# Zinit plugins
 zinit light-mode for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-### End of Zinit's installer chunk
-
-# Zinit plugins
 zinit snippet 'OMZ::plugins/git/git.plugin.zsh'
 zinit snippet 'OMZ::lib/clipboard.zsh'
 zinit snippet 'OMZ::lib/completion.zsh'
@@ -38,10 +33,9 @@ zinit load 'junegunn/fzf-bin'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
+## Zstyle
 zmodload zsh/nearcolor
 zstyle :prompt:pure:path color '#6495ed'
-
-## Zstyle
 autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -94,6 +88,7 @@ zle -N history-beginning-search-forward-end history-search-end
 # Environment variables
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
+export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
 
 ## nodejs, npm with nvm
 export NVM_DIR="$HOME/.config/nvm"
@@ -113,9 +108,6 @@ export PATH="$HOME/.local/bin:$PATH"
 ## kaggle
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
-## neovim
-export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
-
 ## homebrew
 case ${OSTYPE} in
   darwin*)
@@ -133,18 +125,13 @@ case ${OSTYPE} in
     ;;
 esac
 
+## tmux
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    exec tmux
+fi
+
 ## direnv
 eval "$(direnv hook zsh)"
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
 
 # gconf.zsh
 function gconf() {
@@ -157,4 +144,3 @@ function gconf() {
     gcloud config configurations list | grep "${config}"
   fi
 }
-
