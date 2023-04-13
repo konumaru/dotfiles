@@ -46,7 +46,7 @@ USERNAME=$(whoami)
 export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 
 # alias
-alias reload='source ~/.zshrc'
+alias reload='source ~/.zshrc && tmux source-file ~/.tmux.conf'
 alias cdd='cd ${HOME}/Documents'
 alias cdn='cd ${HOME}/Documents/works/note'
 alias ls='ls -alh'
