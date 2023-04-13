@@ -14,5 +14,4 @@
     br = branch
     a = add -u
     c = commit -m
-    pm = push origin main
     firstcom = commit --allow-empty -m \"Inital commit\"
