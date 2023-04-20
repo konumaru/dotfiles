@@ -125,11 +125,6 @@ case ${OSTYPE} in
     ;;
 esac
 
-## tmux
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    exec tmux
-fi
-
 ## direnv
 eval "$(direnv hook zsh)"
 
