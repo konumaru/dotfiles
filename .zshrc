@@ -99,8 +99,8 @@ export NVM_DIR="$HOME/.config/nvm"
 ## pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
 
 ## poetry
 export PATH="$HOME/.local/bin:$PATH"
@@ -139,3 +139,4 @@ function gconf() {
     gcloud config configurations list | grep "${config}"
   fi
 }
+### End of Zinit's installer chunk
