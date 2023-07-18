@@ -48,7 +48,7 @@ export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 # alias
 alias reload='source ~/.zshrc && tmux source-file ~/.tmux.conf'
 alias cdd='cd ${HOME}/Documents'
-alias cdn='cd ${HOME}/Documents/works/note'
+alias cdn='cd ${HOME}/Documents/note'
 alias ls='ls -alh'
 alias vim='nvim'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
@@ -139,4 +139,4 @@ function gconf() {
     gcloud config configurations list | grep "${config}"
   fi
 }
-### End of Zinit's installer chunk
+
