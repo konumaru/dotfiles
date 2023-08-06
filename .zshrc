@@ -140,3 +140,4 @@ function gconf() {
   fi
 }
 
+### End of Zinit's installer chunk

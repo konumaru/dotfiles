@@ -25,7 +25,7 @@ case ${OSTYPE} in
     if [[ "$(uname -r)" == *WSL* ]]; then
       echo "Running on WSL"
       sudo apt install make
-      sudo sh ./etc/init/wsl/setup.sh
+      sudo sh ${HOME}/.dotfiles/etc/init/wsl/setup.sh
     elif [ -e /etc/debian_version ] || [ -e /etc/debian_release ]; then
       # Check Ubuntu or Debian
       if [ -e /etc/lsb-release ]; then
@@ -33,7 +33,7 @@ case ${OSTYPE} in
         echo "Running on Ubuntu"
         distri_name="ubuntu"
 
-        sudo sh ./etc/init/ubuntu/setup.sh
+        sudo sh ${HOME}/.dotfiles/etc/init/ubuntu/setup.sh
       fi
     else
       # Other
