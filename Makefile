@@ -37,10 +37,5 @@ backup:
 	git commit -m "[backup] ${TODAY}"
 	git push origin main
 
-
-gen-github-sshkey:
-	sh ./etc/set_github_ssh_key.sh
-
-
 dump-brewfile:
 	brew bundle dump --force --file ${HOME}/.dotfiles/backups/macos/Brewfile
