@@ -77,8 +77,8 @@ curl -sfL https://direnv.net/install.sh | bash
 
 
 # Make dir for nvim
-sudo make ${HOME}/.config
-sudo make ${HOME}/.config/nvim
+sudo mkdir ${HOME}/.config
+sudo mkdir ${HOME}/.config/nvim
 
 # Set wsl config
 windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
