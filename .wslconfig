@@ -4,7 +4,7 @@
 
 # Limits VM memory to use no more than 4 GB, this can be set as whole numbers using GB or MB
 
-memory=32GB
+memory=100GB
 
 # Sets the VM to use two virtual processors
 
