@@ -1,4 +1,5 @@
 .vscode/
 .config/nvm/
 .config/configstore/
+.config/gh/
 .DS_Store
