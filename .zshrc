@@ -46,7 +46,7 @@ USERNAME=$(whoami)
 export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 
 # alias
-alias reload='source ~/.zshrc && tmux source-file ~/.tmux.conf'
+alias reload='source ~/.zshrc'
 alias cdd='cd ${HOME}/Documents'
 alias cdn='cd ${HOME}/Documents/note'
 alias ls='ls -alh'
@@ -98,9 +98,9 @@ export NVM_DIR="$HOME/.config/nvm"
 
 ## pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 ## poetry
 export PATH="$HOME/.local/bin:$PATH"
@@ -140,5 +140,4 @@ function gconf() {
   fi
 }
 
-### End of Zinit's installer chunk
 ### End of Zinit's installer chunk

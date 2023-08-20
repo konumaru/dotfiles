@@ -15,3 +15,6 @@
     a = add -u
     c = commit -m
     firstcom = commit --allow-empty -m \"Inital commit\"
+[init]
+	defaultBranc = main
+	defaultBranch = main
