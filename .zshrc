@@ -90,24 +90,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
 export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
 
-## nodejs, npm with nvm
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-### End of Zinit's installer chunk
-
-## pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-
-## poetry
-export PATH="$HOME/.local/bin:$PATH"
-
-## kaggle
-export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
-
 ## homebrew
 case ${OSTYPE} in
   darwin*)
@@ -128,6 +110,25 @@ esac
 ## direnv
 eval "$(direnv hook zsh)"
 
+## pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+## poetry
+export PATH="$HOME/.local/bin:$PATH"
+
+## kaggle
+export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
+
+## nodejs, npm with nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+### End of Zinit's installer chunk
+
+
 # gconf.zsh
 function gconf() {
   projData=$(gcloud config configurations list | peco)
@@ -139,5 +140,3 @@ function gconf() {
     gcloud config configurations list | grep "${config}"
   fi
 }
-
-### End of Zinit's installer chunk
