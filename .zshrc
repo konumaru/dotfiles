@@ -19,6 +19,8 @@ zinit snippet 'OMZ::plugins/git/git.plugin.zsh'
 zinit snippet 'OMZ::lib/clipboard.zsh'
 zinit snippet 'OMZ::lib/completion.zsh'
 zinit snippet 'OMZ::lib/compfix.zsh'
+zinit ice as"completion"
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 zinit light 'zsh-users/zsh-autosuggestions'
 zinit light 'zsh-users/zsh-completions'
 zinit light 'zdharma/fast-syntax-highlighting'
