@@ -16,5 +16,6 @@ on_cmd = 'Dein'
  set softtabstop=2
  set shiftwidth=2
  set expandtab
+ let g:vim_markdown_new_list_item_indent = 2
  '''
 
