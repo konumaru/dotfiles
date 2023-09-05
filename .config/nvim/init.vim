@@ -32,6 +32,9 @@ syntax enable
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************"
+
+set clipboard+=unnamed
+
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
