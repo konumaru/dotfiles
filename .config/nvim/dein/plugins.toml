@@ -45,6 +45,16 @@ let g:auto_save_in_insert_mode = 0
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+hook_add = '''
+set encoding=utf-8
+'''
+
 
 # -----
 # Markdown
