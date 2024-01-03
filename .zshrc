@@ -35,6 +35,16 @@ zinit load 'junegunn/fzf-bin'
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
 ## Zstyle
 zmodload zsh/nearcolor
 zstyle :prompt:pure:path color '#6495ed'
@@ -54,6 +64,7 @@ alias cdn='cd ${HOME}/Documents/note'
 alias ls='ls -alh'
 alias vim='nvim'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
+alias gr='cd $(ghq list -p | fzf)'
 
 ## zsh
 export HISTSIZE=1000
@@ -144,8 +155,8 @@ function gconf() {
 }
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/konuma.r/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/konuma.r/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/konuma.r/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/konuma.r/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
