@@ -7,7 +7,7 @@ license = ""
 
 [tool.poetry.dependencies]
 python = "3.12.1"
-poetry = "1.7.1"
+poetry = "^1.7.1"
 
 [tool.poetry.group.additional.dependencies]
 poetry-plugin-export = "^1.6.0"
