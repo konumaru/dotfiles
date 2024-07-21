@@ -72,7 +72,7 @@ sudo curl -sfL https://direnv.net/install.sh | bash
 
 
 # Install linuxbrew
-sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
 # Make dir for nvim
