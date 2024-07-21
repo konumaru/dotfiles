@@ -41,39 +41,38 @@ sudo apt install -y \
 
 sudo pip3 install -U pip
 
-apt autoremove -y	
+sudo apt autoremove -y
 
 # Change default shell to zsh.
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 # Install zinit
-sh -c "$(curl -fsSL https://git.io/zinit-install)"
+sudo sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
 # Set git config
-git config --global user.name "konumaru"
-git config --global user.email "konumaru1022@gmail.com"
+sudo git config --global user.name "konumaru"
+sudo git config --global user.email "konumaru1022@gmail.com"
 
 # Install pyenv
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-/home/${USERNAME}/.pyenv/bin/pyenv install 3.10.8
-/home/${USERNAME}/.pyenv/bin/pyenv global 3.10.8
+sudo curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 # Install poetry
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+sudo curl -sSL https://install.python-poetry.org | python3 -
+/home/${USERNAME}/.poetry/bin/poetry completions zsh > ~/.zfunc/_poetry
 /home/${USERNAME}/.poetry/bin/poetry config virtualenvs.in-project true
 
 
 # Install node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install --lts
 
 
 # Install direnv
-curl -sfL https://direnv.net/install.sh | bash
+sudo curl -sfL https://direnv.net/install.sh | bash
 
 
 # Install linuxbrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
 # Make dir for nvim
