@@ -32,7 +32,6 @@ case ${OSTYPE} in
         # Ubuntu
         echo "Running on Ubuntu"
         distri_name="ubuntu"
-
         sudo sh ${HOME}/.dotfiles/etc/init/ubuntu/setup.sh
       fi
     else

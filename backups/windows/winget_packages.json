@@ -1,113 +1,56 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2022-07-12T01:18:43.226-00:00",
-	"Sources" : 
-	[
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2022-07-12T01:18:43.226-00:00",
+	"Sources": [
 		{
-			"Packages" : 
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "AgileBits.1Password"
+					"PackageIdentifier": "AgileBits.1Password"
 				},
 				{
-					"PackageIdentifier" : "Amazon.Kindle"
+					"PackageIdentifier": "Amazon.Kindle"
 				},
 				{
-					"PackageIdentifier" : "Lexikos.AutoHotkey"
+					"PackageIdentifier": "Lexikos.AutoHotkey"
 				},
 				{
-					"PackageIdentifier" : "Canonical.Ubuntu.2004"
+					"PackageIdentifier": "Discord.Discord"
 				},
 				{
-					"PackageIdentifier" : "Discord.Discord"
+					"PackageIdentifier": "Docker.DockerDesktop"
 				},
 				{
-					"PackageIdentifier" : "Docker.DockerDesktop"
+					"PackageIdentifier": "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "Git.Git"
+					"PackageIdentifier": "GnuWin32.Make"
 				},
 				{
-					"PackageIdentifier" : "Logitech.LogiBolt"
+					"PackageIdentifier": "Microsoft.WindowsTerminal"
 				},
 				{
-					"PackageIdentifier" : "Logitech.Options"
+					"PackageIdentifier": "Valve.Steam"
 				},
 				{
-					"PackageIdentifier" : "GnuWin32.Make"
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
+					"PackageIdentifier": "Microsoft.PowerShell"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+					"PackageIdentifier": "Google.Chrome"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "Mozilla.Thunderbird"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
-				},
-				{
-					"PackageIdentifier" : "Rufus.Rufus"
-				},
-				{
-					"PackageIdentifier" : "Valve.Steam"
-				},
-				{
-					"PackageIdentifier" : "Notion.Notion"
-				},
-				{
-					"PackageIdentifier" : "SlackTechnologies.Slack"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2010Redist-x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode.Insiders"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2012Redist-x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2008Redist-x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2015-2019Redist-x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2013Redist-x86"
-				},
-				{
-					"PackageIdentifier" : "Google.Chrome"
-				},
-				{
-					"PackageIdentifier" : "Nvidia.GeForceExperience"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2010Redist-x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VC++2012Redist-x64"
+					"PackageIdentifier": "Nvidia.GeForceExperience"
 				}
 			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://winget.azureedge.net/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
+			"SourceDetails": {
+				"Argument": "https://winget.azureedge.net/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
 			}
 		}
 	],
-	"WinGetVersion" : "1.2.11601"
+	"WinGetVersion": "1.2.11601"
 }
