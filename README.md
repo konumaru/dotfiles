@@ -32,13 +32,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.
 
 and setup wsl and ubunut with wsl
 
-### Register sshkey on github
-
-```sh
-make gen-github-sshkey
-```
-
-#### Manual required setup
+### Manual required setup
 
 - Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
 
