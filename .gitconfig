@@ -10,22 +10,19 @@
 
 [alias]
     ss = status -s
-    co = checkout
+    ch = checkout
     br = branch
     a = add -u
     c = commit -m
-    firstcom = commit --allow-empty -m \"Inital commit\"
 
 [init]
 	defaultBranc = main
 	defaultBranch = main
 
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 
 [ghq]
