@@ -1,6 +1,6 @@
 [user]
-	name = konumaru
-	email = konumaru1022@gmail.com
+    name = konumaru
+    email = konumaru1022@gmail.com
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -9,21 +9,14 @@
     required = true
 
 [alias]
-    ss = status -s
     ch = checkout
     br = branch
     a = add -u
     c = commit -m
 
 [init]
-	defaultBranc = main
-	defaultBranch = main
-
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
-
-[credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    defaultBranc = main
+    defaultBranch = main
 
 [ghq]
-	root = ~/Documents/repositories
+    root = ~/Documents/repositories
