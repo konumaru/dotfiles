@@ -1,6 +1,5 @@
 # dotfiles
 
-![GitHub Repo stars](https://img.shields.io/github/stars/konumaru/dotfiles?style=social)
 ![GitHub](https://img.shields.io/github/license/konumaru/dotfiles?style=flat-square)
 
 ## Install required tools
@@ -10,29 +9,30 @@
 - [Zinit](https://github.com/zdharma/zinit)
 - [dein.vim](https://github.com/Shougo/dein.vim)
 
-## Usage
+## How To Setup
 
-### Mac
+Mac
 
 ```sh
 bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
 ```
 
-### Ubuntu
+Ubuntu (WSL)
 
 ```sh
 bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
 ```
 
-### Windows
+Windows
 
 ```ps1
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.ps1')
 ```
 
-and setup wsl and ubunut with wsl
+## Manual optional setup
 
-### Manual required setup
+Change the remote url to ssh.
 
-- Font (Cascadia Code PL), from [here](!https://github.com/microsoft/cascadia-code/releases)
-
+```sh
+git remote set-url origin git@github.com:konumaru/dotfiles.git
+```

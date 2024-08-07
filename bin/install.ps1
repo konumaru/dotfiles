@@ -58,4 +58,4 @@ git config --global user.email "konumaru1022@gmail.com"
 
 
 # Install apps
-winget import -i $env:USERPROFILE\.dotfiles\backups\windows\winget_packages.json --ignore-unavailable 
+winget import -i $env:USERPROFILE\.dotfiles\etc\init\windows\winget_packages.json --ignore-unavailable 
