@@ -43,4 +43,4 @@ memory=100GB
 # debugConsole=true
 
 [user]
-default = root
+default = konumaru
