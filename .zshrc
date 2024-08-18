@@ -120,6 +120,9 @@ case ${OSTYPE} in
     ;;
 esac
 
+## github cli
+eval "$(gh completion -s zsh)"
+
 ## direnv
 eval "$(direnv hook zsh)"
 
