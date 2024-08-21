@@ -46,10 +46,6 @@ New-Item $PROFILE
 # powershell profile のシンボリックリンクを作成
 $UserProperty = $(Get-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')
 $SystemProperty = $(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')
-New-Item $(Join-Path $UserProperty.Startup hotkey.ahk)
-    -Value $env:USERPROFILE\.dotfiles\etc\init\windows\hotkey.ahk `
-    -ItemType SymbolicLink `
-    -Force
 
 
 # Set git global settings
