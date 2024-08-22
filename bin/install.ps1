@@ -32,8 +32,8 @@ winget install -e --id Git.Git
 
 
 # dotfiles を git clone する
-if((Test-Path $env:USERPROFILE\.dotfiles) -eq "False"){
-  git clone https://github.com/konumaru/dotfiles.git $env:USERPROFILE\.dotfiles
+if((Test-Path $env:USERPROFILE\dotfiles) -eq "False"){
+  git clone https://github.com/konumaru/dotfiles.git $env:USERPROFILE\dotfiles
 }
 
 
