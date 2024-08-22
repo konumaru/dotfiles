@@ -29,6 +29,35 @@ if ((Test-Path $docsPath\repositories) -eq "False") {
   New-Item -Path $docsPath\repositories -Force -ItemType Directory
 }
 
+<<<<<<< HEAD
+=======
+# Install Git
+winget install -e --id Git.Git
+
+
+# dotfiles を git clone する
+if((Test-Path $env:USERPROFILE\dotfiles) -eq "False"){
+  git clone https://github.com/konumaru/dotfiles.git $env:USERPROFILE\dotfiles
+}
+
+
+# powershell profile のシンボリックリンクを作成
+New-Item $PROFILE
+    -Value $env:USERPROFILE\.dotfiles\etc\init\windows\Microsoft.PowerShell_profile.ps1 `
+    -ItemType SymbolicLink `
+    -Force
+  
+# powershell profile のシンボリックリンクを作成
+$UserProperty = $(Get-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')
+$SystemProperty = $(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders')
+
+
+# Set git global settings
+git config --global user.name "konumaru"
+git config --global user.email "konumaru1022@gmail.com"
+
+
+>>>>>>> 746191e7ab7afadc4e6ffe17920101c0df76d170
 # Install apps
 winget install JanDeDobbeleer.OhMyPosh -s winget
 winget install -e --id Git.Git

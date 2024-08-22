@@ -53,6 +53,17 @@ sudo sh -c "$(curl -fsSL https://git.io/zinit-install)"
 sudo git config --global user.name "konumaru"
 sudo git config --global user.email "konumaru1022@gmail.com"
 
+# Install direnv
+sudo curl -sfL https://direnv.net/install.sh | bash
+
+# Install linuxbrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+#####
+# Python Setup
+#####
+
 # Install pyenv
 sudo curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
@@ -61,19 +72,21 @@ sudo curl -sSL https://install.python-poetry.org | python3 -
 /home/${USERNAME}/.poetry/bin/poetry completions zsh > ~/.zfunc/_poetry
 /home/${USERNAME}/.poetry/bin/poetry config virtualenvs.in-project true
 
+# Install rye
+curl -sSf https://rye.astral.sh/get | bash
+
+
+#####
+# Javascript Setup
+#####
 
 # Install node
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install --lts
 
-
-# Install direnv
-sudo curl -sfL https://direnv.net/install.sh | bash
-
-
-# Install linuxbrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
+#####
+# Vim Setup
+#####
 
 # Make dir for nvim
 sudo mkdir ${HOME}/.config
@@ -81,7 +94,7 @@ sudo mkdir ${HOME}/.config/nvim
 
 # Set wsl config
 windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
-cp ${HOME}/.dotfiles/.wslconfig ${windowsUserProfile}
+cp ${HOME}/dotfiles/.wslconfig ${windowsUserProfile}
 
 # Make dirs
 sudo mkdir ${HOME}/Documents
