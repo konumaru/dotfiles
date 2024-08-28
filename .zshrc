@@ -101,7 +101,7 @@ zle -N history-beginning-search-forward-end history-search-end
 # Environment variables
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
-export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
+export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
 
 ## homebrew
 case ${OSTYPE} in
