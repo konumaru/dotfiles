@@ -13,6 +13,7 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
+    zsh \
     docker.io 
 
 
@@ -48,10 +49,6 @@ sudo chsh -s $(which zsh)
 
 # Install zinit
 sudo sh -c "$(curl -fsSL https://git.io/zinit-install)"
-
-# Set git config
-sudo git config --global user.name "konumaru"
-sudo git config --global user.email "konumaru1022@gmail.com"
 
 # Install direnv
 sudo curl -sfL https://direnv.net/install.sh | bash
@@ -99,3 +96,6 @@ cp ${HOME}/dotfiles/.wslconfig ${windowsUserProfile}
 # Make dirs
 sudo mkdir ${HOME}/Documents
 sudo mkdir ${HOME}/Documents/repositories
+
+# Set default shell
+chsh -s $(which zsh)
