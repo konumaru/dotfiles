@@ -1,0 +1,4 @@
+tap "homebrew/bundle"
+brew "gh"
+brew "node"
+vscode "command is only available in wsl or inside a visual studio code terminal."
