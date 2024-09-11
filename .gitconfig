@@ -11,7 +11,7 @@
 [alias]
     ch = checkout
     br = branch
-    a = add -u
+    a = add -uA
     c = commit -m
 
 [init]
