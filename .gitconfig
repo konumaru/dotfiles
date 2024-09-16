@@ -11,8 +11,9 @@
 [alias]
     ch = checkout
     br = branch
-    a = add -u
+    a = add -u -A
     c = commit -m
+    s = status
 
 [init]
     defaultBranc = main
