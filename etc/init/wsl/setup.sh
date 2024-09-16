@@ -56,6 +56,8 @@ sudo curl -sfL https://direnv.net/install.sh | bash
 # Install linuxbrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+/home/linuxbrew/.linuxbrew/bin/brew bundle --file=${HOME}/dotfiles/etc/init/wsl/Brewfile --no-lock
+
 
 #####
 # Python Setup

@@ -86,3 +86,11 @@ inoremap jj <Esc>
 map <C-l> gt
 map <C-h> gT
 
+
+"*****************************************************************************
+"" Markdown
+"*****************************************************************************
+au BufNewFile,BufRead *.md :set filetype=markdown
+autocmd FileType markdown setlocal shiftwidth=2
+autocmd FileType markdown setlocal tabstop=2
+autocmd FileType markdown setlocal expandtab
