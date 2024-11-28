@@ -2,9 +2,4 @@
 
 GroupAdd("game", "ahk_exe r5apex.exe")
 
-; Disable Win+F
-#F::return
-
-; Setting for when playing game
-#HotIf WinActive("ahk_group game")
-LWin::return
+; Disable Win+F #F::return ; Setting for when playing game #HotIf WinActive("ahk_group game") LWin::return
