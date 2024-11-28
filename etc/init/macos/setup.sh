@@ -7,7 +7,7 @@ if type brew >/dev/null 2>&1; then
 fi
 
 ## Install packages from Brewfile
-brew bundle --file=~/.dotfiles/etc/init/macos/Brewfile --no-lock
+brew bundle --file=~/dotfiles/etc/init/macos/Brewfile --no-lock
 
 ## Newovim
 XDG_CONFIG_HOME=$HOME/.config

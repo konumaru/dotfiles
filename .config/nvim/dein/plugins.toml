@@ -62,7 +62,17 @@ set encoding=utf-8
 [[plugins]]
 repo = 'godlygeek/tabular'
 repo = 'preservim/vim-markdown'
+repo = 'tadmccorkle/markdown.nvim'
+repo = 'nvim-treesitter/nvim-treesitter'
 hook_add = '''
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_new_list_item_indent = 2
+
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "markdown", "markdown_inline" },
+  highlight = { enable = true },
+}
+autocmd FileType markdown setlocal shiftwidth=2
+autocmd FileType markdown setlocal tabstop=2
+autocmd FileType markdown setlocal expandtab
 '''

@@ -11,8 +11,9 @@
 [alias]
     ch = checkout
     br = branch
-    a = add -u
+    a = add -A
     c = commit -m
+    s = status
 
 [init]
     defaultBranc = main
@@ -20,3 +21,7 @@
 
 [ghq]
     root = ~/Documents/repositories
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential

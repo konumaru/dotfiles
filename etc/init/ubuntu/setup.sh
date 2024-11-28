@@ -89,7 +89,7 @@ gsettings set org.gnome.shell.app-switcher current-workspace-only true
 dconf load $(PWD)/backups/ubuntu-20.04/ < /
 
 # Set desktop backgroud image
-gsettings set org.gnome.desktop.background picture-uri file://$HOME/.dotfiles/img/Wallions27696.jpg
+gsettings set org.gnome.desktop.background picture-uri file://$HOME/dotfiles/img/Wallions27696.jpg
 
 # Restart
 sudo reboot

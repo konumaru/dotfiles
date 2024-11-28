@@ -38,4 +38,4 @@ backup:
 	git push origin main
 
 dump-brewfile:
-	brew bundle dump --force --file ${HOME}/.dotfiles/backups/macos/Brewfile
+	brew bundle dump --force --file ${HOME}/dotfiles/etc/init/wsl/Brewfile

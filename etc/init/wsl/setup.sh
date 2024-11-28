@@ -13,6 +13,7 @@ sudo apt install -y \
     neovim \
     tmux \
     tree \
+    zsh \
     docker.io 
 
 
@@ -49,15 +50,13 @@ sudo chsh -s $(which zsh)
 # Install zinit
 sudo sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
-# Set git config
-sudo git config --global user.name "konumaru"
-sudo git config --global user.email "konumaru1022@gmail.com"
-
 # Install direnv
 sudo curl -sfL https://direnv.net/install.sh | bash
 
 # Install linuxbrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+/home/linuxbrew/.linuxbrew/bin/brew bundle --file=${HOME}/dotfiles/etc/init/wsl/Brewfile --no-lock
 
 
 #####
@@ -92,10 +91,9 @@ nvm install --lts
 sudo mkdir ${HOME}/.config
 sudo mkdir ${HOME}/.config/nvim
 
-# Set wsl config
-windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
-cp ${HOME}/dotfiles/.wslconfig ${windowsUserProfile}
-
 # Make dirs
 sudo mkdir ${HOME}/Documents
 sudo mkdir ${HOME}/Documents/repositories
+
+# Set default shell
+chsh -s $(which zsh)
