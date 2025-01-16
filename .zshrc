@@ -65,6 +65,7 @@ alias ls='ls -alh'
 alias vim='nvim'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
+alias plzip='curl ifconfig.me'
 
 ## zsh
 export HISTSIZE=1000
