@@ -127,17 +127,6 @@ eval "$(gh completion -s zsh)"
 ## direnv
 eval "$(direnv hook zsh)"
 
-## pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-
-## poetry
-export PATH="$HOME/.local/bin:$PATH"
-
-## rye
-source "$HOME/.rye/env"
 ## uv
 source $HOME/.cargo/env
 
@@ -167,4 +156,3 @@ function gconf() {
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 ### End of Zinit's installer chunk
-
