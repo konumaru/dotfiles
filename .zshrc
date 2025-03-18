@@ -1,3 +1,17 @@
+USERNAME=$(whoami)
+
+IS_MAC=false
+IS_WSL=false
+
+case ${OSTYPE} in
+  darwin*)
+    IS_MAC=true
+    ;;
+  linux*)
+    IS_WSL=true
+    ;;
+esac
+
 ### Added by Zinit's installer
 if [[ ! -e $HOME/.local/share/zinit/zinit.git ]]; then
     echo "install zinit"
@@ -52,8 +66,6 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-USERNAME=$(whoami)
-
 # Env variables
 export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 
@@ -107,12 +119,7 @@ export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
 ## homebrew
 case ${OSTYPE} in
   darwin*)
-    ARCH=$(uname -m)
-    if [[ $ARCH == arm64 ]]; then
-        eval $(/opt/homebrew/bin/brew shellenv)
-    elif [[ $ARCH == x86_64 ]]; then 
-        eval $(/usr/local/bin/brew shellenv)
-    fi
+    eval $(/opt/homebrew/bin/brew shellenv)
     ;;
   linux*)
     test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
@@ -121,20 +128,22 @@ case ${OSTYPE} in
     ;;
 esac
 
-## github cli
-eval "$(gh completion -s zsh)"
-
-## direnv
-eval "$(direnv hook zsh)"
+# direnv
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
+# github cli
+if command -v gh &> /dev/null; then
+    eval "$(gh completion -s zsh)"
+fi
 
 ## kaggle
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
 ## nodejs, npm with nvm
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-### End of Zinit's installer chunk
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 
 # gconf.zsh
@@ -150,6 +159,8 @@ function gconf() {
 }
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then 
+. "$HOME/google-cloud-sdk/path.zsh.inc"; 
+fi
 
 ### End of Zinit's installer chunk

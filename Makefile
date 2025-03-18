@@ -31,11 +31,12 @@ clean: # Remove the dot files and this repo.
 
 
 .PHONY: backup
-backup:
+backup:  
 	# Upload to github
 	git add -A
 	git commit -m "[backup] ${TODAY}"
 	git push origin main
 
-dump-brewfile:
-	brew bundle dump --force --file ${HOME}/dotfiles/etc/init/wsl/Brewfile
+.PHONY: dump-brewfile
+brewfile: # Generate Brewfile based on OS type
+	@./bin/make_brewfile.sh
