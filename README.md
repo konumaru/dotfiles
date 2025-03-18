@@ -14,25 +14,11 @@
 Mac
 
 ```sh
-bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
+bash -c "$(curl -LsS https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
 
 Ubuntu (WSL)
 
 ```sh
-bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.sh)"
-```
-
-Windows
-
-```ps1
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/konumaru/dotfiles/main/bin/install.ps1')
-```
-
-## Manual optional setup
-
-Change the remote url to ssh.
-
-```sh
-git remote set-url origin git@github.com:konumaru/dotfiles.git
+bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
