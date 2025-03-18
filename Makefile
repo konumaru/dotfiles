@@ -37,6 +37,5 @@ backup:
 	git commit -m "[backup] ${TODAY}"
 	git push origin main
 
-.PHONY: dump-brewfile
 brewfile: # Generate Brewfile based on OS type
 	@./bin/make_brewfile.sh
