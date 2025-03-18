@@ -127,9 +127,6 @@ eval "$(gh completion -s zsh)"
 ## direnv
 eval "$(direnv hook zsh)"
 
-## uv
-source $HOME/.cargo/env
-
 ## kaggle
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
