@@ -13,3 +13,7 @@ brew bundle --file=$DOTPATH/etc/init/macos/Brewfile
 ## Newovim
 XDG_CONFIG_HOME=$HOME/.config
 ln -sfnv $DOTPATH/nvim $XDG_CONFIG_HOME/nvim
+
+## Make dirs
+sudo mkdir ${HOME}/Documents
+sudo mkdir ${HOME}/Documents/repository
