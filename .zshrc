@@ -104,16 +104,13 @@ export PATH=/Library/TeX/texbin:$PATH
 export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
 
 ## homebrew
-case ${OSTYPE} in
-  darwin*)
-    eval $(/opt/homebrew/bin/brew shellenv)
-    ;;
-  linux*)
-    test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-    test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
-    ;;
-esac
+if $IS_MAC; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+elif $IS_WSL; then
+  test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
+fi
 
 # alias
 alias reload='source ~/.zshrc'
