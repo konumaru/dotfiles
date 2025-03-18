@@ -66,19 +66,6 @@ autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# Env variables
-export PATH="/Users/${USERNAME}/.local/bin:$PATH"
-
-# alias
-alias reload='source ~/.zshrc'
-alias cdd='cd ${HOME}/Documents'
-alias cdn='cd ${HOME}/Documents/note'
-alias ls='ls -alh'
-alias vim='nvim'
-alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
-alias gr='cd $(ghq list -p | fzf)'
-alias plzip='curl ifconfig.me'
-
 ## zsh
 export HISTSIZE=1000
 export SAVEHIST=100000
@@ -110,8 +97,8 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
-
 # Environment variables
+export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
 export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
@@ -127,6 +114,18 @@ case ${OSTYPE} in
     test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
     ;;
 esac
+
+# alias
+alias reload='source ~/.zshrc'
+alias cdd='cd ${HOME}/Documents'
+alias cdr='cd ${HOME}/Documents/repository'
+alias ls='ls -alh'
+alias vim='nvim'
+alias python='python3'
+alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
+alias gr='cd $(ghq list -p | fzf)'
+alias plzip='curl ifconfig.me'
+
 
 # direnv
 if command -v direnv &> /dev/null; then
@@ -162,5 +161,3 @@ function gconf() {
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then 
 . "$HOME/google-cloud-sdk/path.zsh.inc"; 
 fi
-
-### End of Zinit's installer chunk
