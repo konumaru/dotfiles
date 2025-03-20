@@ -24,7 +24,7 @@ case ${OSTYPE} in
     ;;
   linux*)
     echo "Running on Linux(WSL)"
-    sudo apt install make
+    sudo apt install make zsh
     sudo /bin/bash -c ${DOTPATH}/init/wsl/setup.sh
     ;;
 esac

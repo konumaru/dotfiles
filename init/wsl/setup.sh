@@ -14,11 +14,7 @@ sudo apt install -y \
     tmux \
     tree \
     zsh \
-    docker.io 
-
-
-# Essential for pyenv
-sudo apt install -y \
+    docker.io \
     build-essential \
     libssl-dev \
     zlib1g-dev \
@@ -36,22 +32,19 @@ sudo apt install -y \
     libffi-dev \
     liblzma-dev \
     direnv \
+    python3-full \
     python3 \
     python3-pip \
     python-is-python3
 
-sudo pip3 install -U pip
 sudo apt autoremove -y
 
 # Change default shell to zsh.
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh) $USERNAME
 
 # Install linuxbrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-/home/linuxbrew/.linuxbrew/bin/brew bundle --file=${HOME}/dotfiles/etc/init/wsl/Brewfile --no-lock
-
-
 # Make dirs
-sudo mkdir ${HOME}/Documents
-sudo mkdir ${HOME}/Documents/repository
+mkdir ${HOME}/Documents
+mkdir ${HOME}/Documents/repository

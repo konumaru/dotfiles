@@ -8,7 +8,7 @@ fi
 
 ## Install packages from Brewfile
 DOTPATH="$HOME/dotfiles"
-brew bundle --file=$DOTPATH/etc/init/macos/Brewfile
+brew bundle --file=$DOTPATH/init/macos/Brewfile
 
 ## Newovim
 XDG_CONFIG_HOME=$HOME/.config
