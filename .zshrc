@@ -123,7 +123,6 @@ alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
 
-
 # direnv
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook zsh)"
@@ -158,3 +157,4 @@ function gconf() {
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then 
 . "$HOME/google-cloud-sdk/path.zsh.inc"; 
 fi
+
