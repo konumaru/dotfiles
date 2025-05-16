@@ -119,6 +119,7 @@ alias cdr='cd ${HOME}/Documents/repository'
 alias ls='ls -alh'
 alias vim='nvim'
 alias python='python3'
+alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
@@ -132,6 +133,8 @@ if command -v gh &> /dev/null; then
     eval "$(gh completion -s zsh)"
 fi
 
+## cookiecutter
+export PATH=$HOME/.local/bin:$PATH
 ## kaggle
 export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 
