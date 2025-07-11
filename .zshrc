@@ -113,6 +113,7 @@ elif $IS_WSL; then
 fi
 
 # alias
+alias c='clear'
 alias reload='source ~/.zshrc'
 alias cdd='cd ${HOME}/Documents'
 alias cdr='cd ${HOME}/Documents/repository'
@@ -123,6 +124,8 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
+alias codex='codex --approval-mode full-auto'
+alias yolo="claude --dangerously-skip-permissions"
 
 # direnv
 if command -v direnv &> /dev/null; then
@@ -142,6 +145,10 @@ export KAGGLE_CONFIG_DIR="$HOME/.kaggle"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+### nvm setting for wsl
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 # gconf.zsh

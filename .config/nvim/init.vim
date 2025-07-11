@@ -33,7 +33,7 @@ syntax enable
 "" Basic Setup
 "*****************************************************************************"
 
-set clipboard+=unnamed
+set clipboard=unnamedplus
 
 "" Encoding
 set encoding=utf-8
