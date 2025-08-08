@@ -168,3 +168,8 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
 fi
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/konumaru/.lmstudio/bin"
+# End of LM Studio CLI section
+
