@@ -124,8 +124,7 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
-alias codex='codex --approval-mode full-auto'
-alias yolo="claude --dangerously-skip-permissions"
+alias ca="cursor-agent"
 
 # direnv
 if command -v direnv &> /dev/null; then
@@ -169,5 +168,3 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
 fi
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
-
-. "$HOME/.turso/env"
