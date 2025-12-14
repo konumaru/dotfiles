@@ -39,6 +39,9 @@
 				},
 				{
 					"PackageIdentifier": "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier": "Microsoft.PowerToys"
 				}
 			],
 			"SourceDetails": {
