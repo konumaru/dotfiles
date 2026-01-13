@@ -73,6 +73,8 @@ set fileformats=unix,dos,mac
 set hls
 set list
 set wrap
+set linebreak
+set breakindent
 set number
 set splitright
 set textwidth=0

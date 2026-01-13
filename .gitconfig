@@ -14,6 +14,7 @@
     a = add -A
     c = commit -m
     s = status
+	copilot-commit = !git diff --staged | copilot -p \"Generate a concise Japanese conventional commit message\" | xargs -I{} git commit -m \"{}\"
 
 [init]
     defaultBranc = main

@@ -1,5 +1,15 @@
 .vscode/
-.config/nvm/
+.config/.copilot/
+.config/autostart/
+.config/chromium/
+.config/claude/
 .config/configstore/
-.config/gh/
+.config/create-next-app-nodejs/
+.config/github-copilot/
+.config/gh/hosts.yml
+.config/iterative/
+.config/nextjs-nodejs/
+.config/nvm/
+.config/turso_cli/
+.config/ngrok/ngrok.yml
 .DS_Store
