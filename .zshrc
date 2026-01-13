@@ -102,6 +102,7 @@ export PATH="/Users/${USERNAME}/.local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH=/Library/TeX/texbin:$PATH
 export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
+export XDG_RUNTIME_DIR=/tmp
 
 ## homebrew
 if $IS_MAC; then

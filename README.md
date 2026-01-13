@@ -22,3 +22,4 @@ Ubuntu (WSL)
 ```sh
 bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
+
