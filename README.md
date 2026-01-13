@@ -19,5 +19,4 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/i
 ## Manual Setup
 
 - [Install Nerd Fonts](https://www.nerdfonts.com/)
-  - Set your terminal font to a Nerd Font (e.g., FiraCode Nerd Font)
   - [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip)
