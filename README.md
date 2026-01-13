@@ -2,13 +2,6 @@
 
 ![GitHub](https://img.shields.io/github/license/konumaru/dotfiles?style=flat-square)
 
-## Install required tools
-
-- Command line tools for xcode
-- [Homebrew](https://brew.sh/index_ja)
-- [Zinit](https://github.com/zdharma/zinit)
-- [dein.vim](https://github.com/Shougo/dein.vim)
-
 ## How To Setup
 
 Mac
@@ -23,3 +16,8 @@ Ubuntu (WSL)
 bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/install.sh)"
 ```
 
+## Manual Setup
+
+- [Install Nerd Fonts](https://www.nerdfonts.com/)
+  - Set your terminal font to a Nerd Font (e.g., FiraCode Nerd Font)
+  - [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip)
