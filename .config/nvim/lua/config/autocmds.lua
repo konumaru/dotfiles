@@ -25,6 +25,29 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.expandtab = true
     vim.bo.textwidth = 80
     vim.wo.colorcolumn = "80"
+    local formatoptions = vim.bo.formatoptions
+    if not formatoptions:find("r", 1, true) then
+      formatoptions = formatoptions .. "r"
+    end
+    if not formatoptions:find("o", 1, true) then
+      formatoptions = formatoptions .. "o"
+    end
+    if not formatoptions:find("n", 1, true) then
+      formatoptions = formatoptions .. "n"
+    end
+    vim.bo.formatoptions = formatoptions
+
+    local comments = vim.bo.comments
+    local function add_comment_leader(leader)
+      if not comments:find(leader, 1, true) then
+        comments = comments .. (comments == "" and "" or ",") .. leader
+      end
+    end
+
+    add_comment_leader("b:-")
+    add_comment_leader("b:+")
+    add_comment_leader("b:*")
+    vim.bo.comments = comments
   end,
 })
 

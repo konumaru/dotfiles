@@ -1,5 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+-- Disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+-- Disable Copilot tab mapping
+vim.g.copilot_no_tab_map = true
 
 local have_nerd_font = true
 local env = vim.env.NVIM_HAVE_NERD_FONT

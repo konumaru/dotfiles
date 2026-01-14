@@ -20,3 +20,4 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/i
 
 - [Install Nerd Fonts](https://www.nerdfonts.com/)
   - [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip)
+
