@@ -7,6 +7,9 @@
 !.config/nvim/
 !.config/nvim/**
 
+.codex/*
+!.codex/AGENTS.md
+
 .xdg-data/
 .xdg-cache/
 .xdg-state/
