@@ -85,8 +85,6 @@ setopt no_beep
 setopt auto_param_slash
 ### 語の途中でもカーソル位置で補完
 setopt complete_in_word
-### history の共有
-setopt share_history
 ### 部分補完をしてくれるやつ
 setopt list_types
 setopt auto_list
