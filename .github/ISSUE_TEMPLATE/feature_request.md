@@ -1,8 +1,8 @@
 ---
-name: "[Feature]"
+name: "Feature Request"
 about: Propose a new feature or enhancement
-title: ""
-labels: ""
+title: "[Feature]"
+labels: "enhancement"
 assignees: ""
 ---
 
