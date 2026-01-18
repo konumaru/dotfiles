@@ -1,11 +1,27 @@
 local augroup = vim.api.nvim_create_augroup("KonumaruNvim", { clear = true })
 
+local function autosave(bufnr)
+  if vim.bo[bufnr].buftype ~= "" then
+    return
+  end
+  if vim.bo[bufnr].readonly or not vim.bo[bufnr].modifiable then
+    return
+  end
+  if vim.api.nvim_buf_get_name(bufnr) == "" then
+    return
+  end
+  if not vim.bo[bufnr].modified then
+    return
+  end
+  vim.api.nvim_buf_call(bufnr, function()
+    vim.cmd("silent update")
+  end)
+end
+
 vim.api.nvim_create_autocmd({ "InsertLeave", "FocusLost" }, {
   group = augroup,
-  callback = function()
-    if vim.bo.modified then
-      vim.cmd("silent write")
-    end
+  callback = function(args)
+    autosave(args.buf)
   end,
 })
 
