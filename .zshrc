@@ -67,6 +67,9 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## zsh
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=1000
 export SAVEHIST=100000
 ### ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
