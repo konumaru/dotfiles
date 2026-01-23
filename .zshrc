@@ -136,6 +136,10 @@ fi
 if command -v gh &> /dev/null; then
     eval "$(gh completion -s zsh)"
 fi
+# uv
+if command -v gh &> /dev/null; then
+    eval "$(uv generate-shell-completion zsh)"
+fi
 
 ## cookiecutter
 export PATH=$HOME/.local/bin:$PATH

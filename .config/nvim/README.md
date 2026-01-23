@@ -7,7 +7,7 @@
 
 ## Keymaps
 
-- Search (Telescope): `<leader>sf` files, `<leader>sg` grep, `<leader>sh` help, `<leader><leader>` buffers
+- Search (Telescope): `<leader>sf` files, `<leader>sg` grep, `<leader>fw` grep (word), `<leader>sh` help, `<leader><leader>` buffers
 - Explorer (Oil): `<leader>e`
 - Explorer (Neo-tree): `<leader>n`
 - Format (Conform): `<leader>f`

@@ -24,6 +24,7 @@ return {
 
       map("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
       map("n", "<leader>fg", builtin.live_grep, { desc = "Grep" })
+      map("n", "<leader>fw", builtin.live_grep, { desc = "Grep (word)" })
       map("n", "<leader>fb", builtin.buffers, { desc = "Buffers" })
       map("n", "<leader>fh", builtin.help_tags, { desc = "Help" })
     end,
