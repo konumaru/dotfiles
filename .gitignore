@@ -6,6 +6,7 @@
 !.config/gh/**
 !.config/nvim/
 !.config/nvim/**
+.config/nvim/lazy-lock.json
 
 .codex/*
 !.codex/AGENTS.md

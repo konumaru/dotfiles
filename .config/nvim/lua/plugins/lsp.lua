@@ -48,8 +48,6 @@ return {
           map("<leader>rn", vim.lsp.buf.rename, "Rename")
           map("<leader>ca", vim.lsp.buf.code_action, "Code action", { "n", "x" })
           map("<leader>ld", vim.diagnostic.open_float, "Line diagnostics")
-          map("[d", vim.diagnostic.goto_prev, "Prev diagnostic")
-          map("]d", vim.diagnostic.goto_next, "Next diagnostic")
 
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if not client then
@@ -100,6 +98,7 @@ return {
         pyright = {
           settings = {
             python = {
+              pythonPath = vim.fn.system('uv run which python'):gsub('\n', ''),
               analysis = {
                 typeCheckingMode = "basic",
                 autoSearchPaths = true,
