@@ -2,10 +2,10 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 local function bootstrap_lazy()
   if vim.env.NVIM_SKIP_BOOTSTRAP == "1" then
-    return vim.loop.fs_stat(lazypath) ~= nil
+    return vim.uv.fs_stat(lazypath) ~= nil
   end
 
-  if vim.loop.fs_stat(lazypath) then
+  if vim.uv.fs_stat(lazypath) then
     return true
   end
 
@@ -55,4 +55,3 @@ lazy.setup({
     border = "rounded",
   },
 })
-
