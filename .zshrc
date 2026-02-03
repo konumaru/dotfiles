@@ -67,20 +67,17 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## zsh
-setopt SHARE_HISTORY
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=100000
 setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
-export HISTSIZE=1000
-export SAVEHIST=100000
-### ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
-setopt hist_ignore_all_dups
-### スペースで始まるコマンド行はヒストリリストから削除
+setopt HIST_REDUCE_BLANKS 
 setopt hist_ignore_space ### 余分な空白は詰めて記録 setopt hist_reduce_blanks
 ### historyコマンドは履歴に登録しない
 setopt hist_no_store
 ### 同時に起動しているzshの間でhistoryを共有する
-setopt share_history
-### コマンドのスペルミスを指摘
 setopt correct
 ### ビープ音を鳴らさない
 setopt no_beep
@@ -152,8 +149,11 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ### nvm setting for wsl
 export NVM_DIR="$HOME/.nvm"
-[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+    [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 # gconf.zsh

@@ -28,8 +28,14 @@
 	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [core]
 	autocrlf = input
+    pager = delta
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [credential]
 	helper = store
+
+[delta]
+    line-numbers = true
+    syntax-theme = Monokai Extended
