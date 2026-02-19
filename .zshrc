@@ -123,7 +123,7 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
-alias ca="cursor-agent"
+alias codex='codex --full-auto'
 
 # direnv
 if command -v direnv &> /dev/null; then
