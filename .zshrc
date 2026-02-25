@@ -178,7 +178,3 @@ fpath+=~/.zfunc; autoload -Uz compinit; compinit
 export PATH="$PATH:/Users/konumaru/.lmstudio/bin"
 # End of LM Studio CLI section
 
-# Auto-start tmux on interactive shells
-if [[ -o interactive ]] && command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" ]]; then
-  exec tmux
-fi
