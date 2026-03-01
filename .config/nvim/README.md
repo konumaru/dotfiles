@@ -10,6 +10,7 @@
 - Search (Telescope): `<leader>sf` files, `<leader>sg` grep, `<leader>fw` grep (word), `<leader>sh` help, `<leader><leader>` buffers
 - Explorer (Oil): `<leader>e`
 - Explorer (Neo-tree): `<leader>n`
+- Git (Diffview): `<leader>gd` diff view, `<leader>gh` file history
 - Format (Conform): `<leader>f`
 
 ## Setup
