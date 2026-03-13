@@ -123,7 +123,7 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias plzip='curl ifconfig.me'
-alias codex='codex --full-auto'
+alias codex='codex -a never -s workspace-write'
 
 # direnv
 if command -v direnv &> /dev/null; then
