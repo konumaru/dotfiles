@@ -8,6 +8,10 @@
 !.config/nvim/**
 .config/nvim/lazy-lock.json
 
+.codex/*
+!.codex/config.toml
+!.codex/skills/*
+
 .xdg-data/
 .xdg-cache/
 .xdg-state/
