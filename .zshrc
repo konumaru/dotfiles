@@ -44,6 +44,7 @@ zinit light 'reegnz/jq-zsh-plugin'
 zinit light 'b4b4r07/emoji-cli'
 zinit light 'mollifier/anyframe'
 zinit light 'reegnz/jq-zsh-plugin'
+zinit light "Aloxaf/fzf-tab"
 zinit load 'junegunn/fzf-bin'
 ## Load pure theme
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
@@ -65,6 +66,8 @@ zstyle :prompt:pure:path color '#6495ed'
 autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:*' fzf-preview 'less ${(Q)realpath}'
 
 ## zsh
 HISTFILE=~/.zsh_history

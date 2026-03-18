@@ -23,19 +23,18 @@
 [ghq]
     root = ~/Documents/repositories
 
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
-[core]
-	autocrlf = input
-    pager = delta
-
-[credential "https://github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
-[credential]
-	helper = store
-
 [delta]
     line-numbers = true
     syntax-theme = Monokai Extended
+
+[user]
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMJP6w1/wIkhxte3pfewwnvlheAuUGkxUdRczP5j4Ad4
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/mnt/c/Program Files/1Password/app/8/op-ssh-sign-wsl"
+
+[commit]
+    gpgsign = true
