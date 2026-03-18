@@ -1,5 +1,40 @@
-approval_policy = "on-request"
+model = "gpt-5.4"
+model_reasoning_effort = "xhigh"
+approval_policy  = "never"
+sandbox_mode = "workspace-write"
+shell_snapshots = true
 
-[mcp_servers.chrome_devtools]
+[projects."/home/konumaru/Documents/repository/"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/explaza-pw-tas-agent"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/stock-watch-app"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/keiba-ai"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/dotfiles"]
+trust_level = "trusted"
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[mcp_servers.chrome-devtools]
 command = "npx"
-args = ["-y", "chrome-devtools-mcp@latest"]
+args = ["chrome-devtools-mcp@latest"]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[features]
+rmcp_client = true
+
+[sandbox_workspace_write]
+network_access = true
