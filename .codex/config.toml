@@ -19,6 +19,12 @@ trust_level = "trusted"
 [projects."/home/konumaru/dotfiles"]
 trust_level = "trusted"
 
+[projects."/Users/konumaru/Documents/repository"]
+trust_level = "trusted"
+
+[projects."/Users/konumaru/dotfiles"]
+trust_level = "trusted"
+
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
 
