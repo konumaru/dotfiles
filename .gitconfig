@@ -14,7 +14,7 @@
     a = add -A
     c = commit -m
     s = status
-	copilot-commit = !git diff --staged | copilot -p 'ステージ済みの git diff を読み、Japanese Conventional Commits 形式の件名を 1 行だけ出力してください。形式は <type>: <summary> または <type>(<scope>): <summary>。type は feat, fix, refactor, docs, test, chore, ci, build, perf, style から最適なものを選ぶ。summary は自然な日本語で、具体的かつ簡潔に、可能なら 60 文字以内。scope は明確な場合のみ付ける。説明、引用符、コードブロック、箇条書き、前置き、後書き、改行は不要。出力は件名 1 行のプレーンテキストのみ。' | tr -d '\\n' | git commit -m \"$(cat)\"
+    copilot-commit = !git diff --staged | copilot -p 'Generate a Japanese conventional commit title (one line only).' | tr -d '\\n' | git commit -m \"$(cat)\"
 
 [init]
     defaultBranch = main
