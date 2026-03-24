@@ -1,19 +1,8 @@
 #!/bin/bash
 
-# Install Homebrew
-## Install homebrew when it was not installed
-if type brew >/dev/null 2>&1; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+set -euo pipefail
 
-## Install packages from Brewfile
-DOTPATH="$HOME/dotfiles"
-brew bundle --file=$DOTPATH/init/macos/Brewfile
+DOTPATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-## Newovim
-XDG_CONFIG_HOME=$HOME/.config
-ln -sfnv $DOTPATH/nvim $XDG_CONFIG_HOME/nvim
-
-## Make dirs
-sudo mkdir ${HOME}/Documents
-sudo mkdir ${HOME}/Documents/repository
+"${DOTPATH}/bin/bootstrap.sh"
+make -C "${DOTPATH}" sync

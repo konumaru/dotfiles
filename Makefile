@@ -1,5 +1,5 @@
 EXCLUSIONS := .DS_Store .git .github .gitmodules .config
-CANDIDATES := $(wildcard .??*) $(wildcard .config/??*) # bin
+CANDIDATES := $(wildcard .??*) $(wildcard .config/??*)
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 
@@ -16,9 +16,23 @@ deploy: # Create symlink to home directory.
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 
 
-.PHONY: lint
+.PHONY: list
 list: # Show dot files in this repo
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
+
+
+.PHONY: bootstrap
+bootstrap: # Install platform prerequisites and Homebrew.
+	@./bin/bootstrap.sh
+
+
+.PHONY: brew-sync
+brew-sync: # Sync Homebrew packages from common and platform Brewfiles.
+	@./bin/sync_brew.sh
+
+
+.PHONY: sync
+sync: brew-sync deploy # Sync Homebrew packages and deploy dotfiles.
 
 
 .PHONY: clean

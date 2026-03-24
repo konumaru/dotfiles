@@ -131,12 +131,22 @@ export XDG_CONFIG_HOME="$HOME/dotfiles/.config"
 export XDG_RUNTIME_DIR=/tmp
 
 ## homebrew
+BREW_BIN=""
+for candidate in \
+  /opt/homebrew/bin/brew \
+  /usr/local/bin/brew \
+  /home/linuxbrew/.linuxbrew/bin/brew \
+  "${HOME}/.linuxbrew/bin/brew"; do
+  if [[ -x "${candidate}" ]]; then
+    BREW_BIN="${candidate}"
+    break
+  fi
+done
+
 if $IS_MAC; then
-  eval $(/opt/homebrew/bin/brew shellenv)
+  [[ -n "${BREW_BIN}" ]] && eval "$("${BREW_BIN}" shellenv)"
 elif $IS_WSL; then
-  test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\""
+  [[ -n "${BREW_BIN}" ]] && eval "$("${BREW_BIN}" shellenv)"
 fi
 
 # alias

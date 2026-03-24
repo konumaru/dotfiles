@@ -1,34 +1,48 @@
 #!/bin/bash
-DOTPATH=~/dotfiles
-GITHUB_URL=https://github.com/konumaru/dotfiles
+
+set -euo pipefail
+
+DOTPATH="${HOME}/dotfiles"
+GITHUB_URL="https://github.com/konumaru/dotfiles"
 
 clone_dotfiles() {
-  if [ -d $DOTPATH ]; then
-    echo "Already exists $DOTPATH"
+  if [[ -d "${DOTPATH}" ]]; then
+    echo "Already exists ${DOTPATH}"
     exit 1
   fi
 
-  if type "git" > /dev/null 2>&1; then
-    git clone ${GITHUB_URL}.git $DOTPATH
+  if command -v git >/dev/null 2>&1; then
+    git clone "${GITHUB_URL}.git" "${DOTPATH}"
   else
     echo "Install git!"
     exit 1
   fi
 }
 
-# Check os and run setup.sh
-case ${OSTYPE} in
-  darwin*)
-    echo "Running on MacOS"
-    sudo sh ${DOTPATH}/init/macos/setup.sh
+prepare_linux() {
+  if ! command -v git >/dev/null 2>&1 || ! command -v make >/dev/null 2>&1; then
+    sudo apt update -y
+    sudo apt install -y git make zsh
+  fi
+}
+
+case "$(uname -s)" in
+  Darwin)
+    echo "Running on macOS"
     ;;
-  linux*)
-    echo "Running on Linux(WSL)"
-    sudo apt install make zsh
-    sudo /bin/bash -c ${DOTPATH}/init/wsl/setup.sh
+  Linux)
+    echo "Running on Linux"
+    prepare_linux
+    ;;
+  *)
+    echo "Unsupported OS: $(uname -s)"
+    exit 1
     ;;
 esac
 
 clone_dotfiles
-make deploy
+
+"${DOTPATH}/bin/bootstrap.sh"
+make -C "${DOTPATH}" sync
+
 command echo -e "\e[1;36m Install completed!!!! \e[m"
