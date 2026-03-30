@@ -10,13 +10,13 @@
 - Search (Telescope): `<leader>sf` files, `<leader>sg` grep, `<leader>fw` grep (word), `<leader>sh` help, `<leader><leader>` buffers
 - Explorer (Oil): `<leader>e`
 - Explorer (Neo-tree): `<leader>n`
-- Git (Diffview): `<leader>gd` diff view, `<leader>gh` file history
+- Git (Diffview): `<leader>gd` diff view, `<leader>gh` file history, `<leader>gq` close diff view
 - Format (Conform): `<leader>f`
 
 ## Setup
 
 - Plugins: `:Lazy sync`
-- LSP/tools: `:Mason` (auto-install via `mason-tool-installer.nvim` on startup)
+- LSP/tools: `:Mason` (auto-install/update via `mason-tool-installer.nvim` on startup, debounced to once per 24 hours)
 - Copilot: `:Copilot auth`
 
 ## Nerd Font toggle

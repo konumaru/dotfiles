@@ -19,6 +19,7 @@ return {
     keys = {
       { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "[G]it [D]iff" },
       { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "[G]it [H]istory (file)" },
+      { "<leader>gq", "<cmd>DiffviewClose<cr>", desc = "[G]it [Q]uit diff view" },
     },
     dependencies = {
       "nvim-lua/plenary.nvim",

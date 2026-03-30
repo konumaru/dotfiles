@@ -127,6 +127,8 @@ return {
           "prettierd",
         },
         run_on_start = true,
+        auto_update = true,
+        debounce_hours = 24,
       })
 
       for server_name, server_config in pairs(servers) do
