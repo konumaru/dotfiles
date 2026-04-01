@@ -38,6 +38,9 @@ url = "https://mcp.linear.app/mcp"
 command = "npx"
 args = ["chrome-devtools-mcp@latest"]
 
+[mcp_servers.chrome-devtools.tools.navigate_page]
+approval_mode = "approve"
+
 [mcp_servers.playwright]
 command = "npx"
 args = ["@playwright/mcp@latest"]
@@ -61,6 +64,12 @@ approval_mode = "approve"
 approval_mode = "approve"
 
 [mcp_servers.playwright.tools.browser_drag]
+approval_mode = "approve"
+
+[mcp_servers.playwright.tools.browser_run_code]
+approval_mode = "approve"
+
+[mcp_servers.playwright.tools.browser_type]
 approval_mode = "approve"
 
 [features]
