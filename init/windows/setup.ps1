@@ -7,4 +7,11 @@ if (-not (Test-Path $packagesPath)) {
 
 winget import -i $packagesPath
 
-& "$PSScriptRoot\install_nerd_font.ps1"
+$fontInstallerPath = Join-Path $PSScriptRoot "install_nerd_font.ps1"
+
+if (-not (Test-Path $fontInstallerPath)) {
+  Write-Error "install_nerd_font.ps1 not found: $fontInstallerPath"
+  exit 1
+}
+
+& $fontInstallerPath

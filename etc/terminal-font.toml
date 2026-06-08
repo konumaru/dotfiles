@@ -1,4 +1,4 @@
-# Canonical Nerd Font settings for this repository.
+# Canonical Nerd Font settings for this repository (manual sync reference).
 # Keep terminal-specific configs aligned with these values:
 # - .wezterm.lua uses `font.family` and `macos.size`
 # - .alacritty.toml uses `font.family` and `macos.size`
