@@ -19,6 +19,7 @@ bash -c "$(wget -qO - https://raw.githubusercontent.com/konumaru/dotfiles/main/i
 ## Manual Setup
 
 - Shared font definition: `etc/terminal-font.toml`
+- `etc/terminal-font.toml` is the canonical value set. When you change these values, update terminal-specific files together (`.wezterm.lua`, `.alacritty.toml`, `init/windows/windows-terminal.settings.json`).
 - Install JetBrainsMono Nerd Font
   - macOS
     ```sh
