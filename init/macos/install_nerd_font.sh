@@ -7,5 +7,8 @@ if ! command -v brew >/dev/null 2>&1; then
   exit 1
 fi
 
-brew tap homebrew/cask-fonts
+if ! brew tap | grep -qx "homebrew/cask-fonts"; then
+  brew tap homebrew/cask-fonts
+fi
+
 brew install --cask font-jetbrains-mono-nerd-font

@@ -1,3 +1,8 @@
+# Canonical Nerd Font settings for this repository.
+# Keep terminal-specific configs aligned with these values:
+# - .wezterm.lua uses `font.family` and defaults to `macos.size`
+# - .alacritty.toml uses `font.family` and `macos.size`
+# - init/windows/windows-terminal.settings.json uses `font.family` and `windows.size`
 [font]
 family = "JetBrainsMono Nerd Font"
 

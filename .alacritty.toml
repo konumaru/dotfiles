@@ -1,3 +1,4 @@
+# Keep this value aligned with etc/terminal-font.toml [macos].size.
 [font]
 size = 14.0
 
