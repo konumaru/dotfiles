@@ -1,0 +1,11 @@
+# Canonical Nerd Font settings for this repository (manual sync reference).
+# Keep terminal-specific configs aligned with these values:
+# - init/windows/windows-terminal.settings.json uses `font.family` and `windows.size`
+[font]
+family = "JetBrainsMono Nerd Font"
+
+[macos]
+size = 14.0
+
+[windows]
+size = 11.0

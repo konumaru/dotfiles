@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "profiles": {
+    "defaults": {
+      "font": {
+        "face": "JetBrainsMono Nerd Font",
+        "size": 11.0
+      }
+    }
+  }
+}
