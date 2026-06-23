@@ -161,6 +161,7 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias lg='lazygit'
+alias codex='brew upgrade codex && codex'
 
 # direnv
 if command -v direnv &> /dev/null; then
