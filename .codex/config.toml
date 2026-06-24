@@ -1,8 +1,11 @@
-model = "gpt-5.4"
+model = "gpt-5.5"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+personality = "pragmatic"
+
+web_search = "live"
 model_reasoning_effort = "xhigh"
-approval_policy  = "never"
-sandbox_mode = "danger-full-access"
-shell_snapshots = true
+service_tier = "fast"
 
 [projects."/home/konumaru/Documents/repository/"]
 trust_level = "trusted"
@@ -16,7 +19,37 @@ trust_level = "trusted"
 [projects."/home/konumaru/Documents/repository/keiba-ai"]
 trust_level = "trusted"
 
+[projects."/home/konumaru/Documents/repository/pw-tas-knmr-app"]
+trust_level = "trusted"
+
 [projects."/home/konumaru/dotfiles"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/wiki"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/dexter-jp"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/biz-agent-ops"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/yomitoka"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/fy26-q2-team-alpha"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/konumaru.github.io"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/resume"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/note-ops"]
+trust_level = "trusted"
+
+[projects."/home/konumaru/Documents/repository/spider-local"]
 trust_level = "trusted"
 
 [projects."/Users/konumaru/Documents/repository"]
@@ -44,42 +77,15 @@ url = "https://mcp.linear.app/mcp"
 command = "npx"
 args = ["chrome-devtools-mcp@latest"]
 
-[mcp_servers.chrome-devtools.tools.navigate_page]
-approval_mode = "approve"
-
 [mcp_servers.playwright]
 command = "npx"
 args = ["@playwright/mcp@latest"]
 
-[mcp_servers.playwright.tools.browser_navigate]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_fill_form]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_click]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_press_key]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_evaluate]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_resize]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_drag]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_run_code]
-approval_mode = "approve"
-
-[mcp_servers.playwright.tools.browser_type]
-approval_mode = "approve"
-
-[features]
-rmcp_client = true
-
 [sandbox_workspace_write]
 network_access = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
