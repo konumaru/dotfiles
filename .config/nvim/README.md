@@ -15,7 +15,7 @@
 
 ## Setup
 
-- Plugins: `:Lazy sync`
+- Plugins: `:Lazy sync` (also runs automatically on startup, debounced to once per 24 hours)
 - LSP/tools: `:Mason` (auto-install/update via `mason-tool-installer.nvim` on startup, debounced to once per 24 hours)
 - Copilot: `:Copilot auth`
 
