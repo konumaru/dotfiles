@@ -161,7 +161,7 @@ alias pip='pip3'
 alias cc-kaggle='cookiecutter gh:konumaru/cookiecutter-kaggle'
 alias gr='cd $(ghq list -p | fzf)'
 alias lg='lazygit'
-alias codex='codex -s danger-full-access'
+alias claude2='CLAUDE_CONFIG_DIR="$HOME/.claude-account-2" claude'
 
 # direnv
 if command -v direnv &> /dev/null; then
